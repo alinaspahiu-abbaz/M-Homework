@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+<body>
+<div class="container">
+ <!-- Navbar -->
+    <ul class="nav bg-primary ">
+        <li class="nav-item">
+          <a class="nav-link text-light active" href="#">Navbar</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-light size-sm" href="#">Home</a>
+        </li>
+    </ul>
+ <!-- End of the NavBar-->
+
+ <!-- Exercise 1-->
+ <h1 style="text-align:center;">Exercise 1</h1>
+ <p style="text-align: center;"> Ricreate this table using Bootstrap4 classes or styling, without adding removing any DOM element.</p>
+ <style>
+     .border{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        border-width: 10px;
+        border-color: black;
+        height:400px;
+        color:white;
+          }
+      .border1{border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        height:400px;}
+
+       .first-column{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           
+           }
+        .second-column{
+            font-size:12px;
+            font-weight: bold;
+            position: relative;
+            
+            
+           
+            
+            
+        }
+        .row1{
+            border-top-right-radius: 30px;
+            height:133.33px;
+            background-color:rgb(248, 248, 186);
+            color:black;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+        .row2{height:133.33px;
+            background-color:rgb(241, 241, 121);
+            color:black;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+
+            .row3 {height:133.33px;
+            background-color:rgb(238, 238, 50);
+            border-bottom-right-radius: 30px;
+            color:black;
+            display: flex;
+           justify-content: center;
+           align-items: center;}
+ </style>
+  <div class="row border">
+      <!--First Column-->
+      <div class="col-6 bg-success  border1 first-column">
+          <p>First Column<br>
+             Height 400px;<br>
+             Green-ish background<br>
+             Text-Centered</p>
+          <!-- <p>Height 400px;</p>
+          <p> Green-ish background</p>
+          <p>Text Centered</p> -->
+      </div>
+      <!-- Second Column -->
+      <div class="col-2  bg-primary second-column align-bottom">
+        <p>Second Column</p>
+        <p>Text to the bottom</p>
+        <p> Bold, blueish background</p>
+        
+    </div>
+     <!-- Third Column-->
+
+    <div class="col-4 border-left">
+        <div class="row row1 align-self-start border-bottom ">
+            <p>Third Column Part 1</p>
+        </div>
+        <div class="row row2  align-self-center">
+            <p>Third Column Part 1</p>
+        </div>
+        <div class="row row3 align-self-end border-top">
+            <p>Third Column Part 1</p>
+        </div>
+        
+        
+    </div>
+
+  </div>
+
+
+
+
+</div><!-- end of the first container div-->
+ 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
