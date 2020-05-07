@@ -127,12 +127,22 @@
       
       
 
-       <!-- Ex. 3 and 4-->
-      <h3 class="my-4" id="wdeal">Favorite Albums</h3>
+       <!-- Ex. 3 - 4 - 13-->
+       
+       <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Hide/Show F-Album
+      </button>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+       
+      <h3 class="my-4" id="collapseExample">Favorite Albums</h3>
       <section>
       <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4"  id="dealofweek">
         <div class="col mb-4">
           <div class="card">
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Someone Like You
+            </button>
             <img src="adele.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Adele / Someone like you</h5>
@@ -155,6 +165,9 @@
         </div>
         <div class="col mb-4">
           <div class="card">
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Direniyorum
+            </button>
             <img src="rafet.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Rafet el Roman / Direniyorum</h5>
@@ -170,6 +183,7 @@
                   <a class="dropdown-item" href="#">Second Song</a>
                   <a class="dropdown-item" href="#">Third Song</a>
                 </div>
+                
               </div>
             </div>
            
@@ -177,6 +191,9 @@
         </div>
         <div class="col mb-4">
           <div class="card">
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Love yourself
+            </button>
             <img src="eminem.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Eminem / Love Yourself </h5>
@@ -199,6 +216,9 @@
         </div>
         <div class="col mb-4">
           <div class="card">
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Bon Bon
+            </button>
             <img src="era.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">Era Istrefi / Bon Bon </h5>
@@ -220,8 +240,15 @@
           </div>
         </div>
       </div>
+      
+    </div>
+  </div><br>
+  <button class="btn btn-dark mt-5" type="button" data-toggle="collapse" data-target="#tableT" aria-expanded="false" aria-controls="collapseE">
+   Hide/Show the Table
+  </button>
 
-      <table  class="table table-dark">
+  <div class="collapse" id="tableT">
+      <table  id="tableT" class="table table-dark">
         <thead>
           <tr>
             <th scope="col">Track Order</th>
@@ -250,8 +277,8 @@
            
           </tr>
         </tbody>
-      </table>
-      <button type="button" class="btn btn-outline-secondary" onclick="remove()">Delete</button>
+      </table> <button type="button" class="btn btn-outline-secondary" onclick="remove()">Delete</button></div>
+      
       <script>
         
             function remove() { 
@@ -260,111 +287,279 @@
         
     
       </script>
-      
-      
 
+      <!-- Worst Album-->
 
-      <h3 class="my-4" id="summerid">Welcome Summer</h3>
-      <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 shadow p-3 mb-5 bg-white rounded" id="summer">
+      <br>
+      <button class="btn btn-danger mt-5" type="button" data-toggle="collapse" data-target="#worsA" aria-expanded="false" aria-controls="collapseE">
+        Hide/Show Worst Songs
+      </button>
+
+      <div class="collapse" id="worsA">
+
+     
+        <div class="card card-body">
+       
+      <h3 class="my-4" id="worsA">Worst Songs</h3>
+      <section>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4"  id="dealofweek">
         <div class="col mb-4">
           <div class="card">
-            <img src="https://live.staticflickr.com/8319/27942862924_41e24859e0_b.jpg" class="card-img-top" alt="..." />
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Someone Like You
+            </button>
+            <img src="adele.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Pigeons Rock, LEBANON</h5>
-<!--              <p class="card-text">
-                The songs "Get the Party Started", "Don't Let Me Get Me" and "Just like a Pill" became hits on the Billboard Hot 100.
-              </p>-->
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i3d13dbbe7f3ac546/version/1556877470/saint-barthelemy-france-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">St. Barthelemy, FRANCE </h5>
-<!--              <p class="card-text">
-                The Edge of Heaven is the third and final studio album from British pop duo Wham!
-              </p> -->
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i22883c9fa879fc30/version/1557919619/san-sebastian-spain-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">San Sebastian, SPAIN</h5>
-<!--              <p class="card-text">
-                The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
-              </p> -->
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/idee17aecc71437aa/version/1556884841/ventspils-latvia-best-beach-destinations.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Venpils, LATVIA</h5>
+              <h5 class="card-title">Adele / Someone like you</h5>
 <!--           <p class="card-text">
                 The fourth single "Angels" which catapulted Williams to international fame as a solo artist.
               </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Direniyorum
+            </button>
+            <img src="rafet.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Rafet el Roman / Direniyorum</h5>
+<!--           <p class="card-text">
+                The fourth single "Angels" which catapulted Williams to international fame as a solo artist.
+              </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+                
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Love yourself
+            </button>
+            <img src="eminem.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Eminem / Love Yourself </h5>
+<!--              <p class="card-text">
+                The Edge of Heaven is the third and final studio album from British pop duo Wham!
+              </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+           
             </div>
           </div>
         </div>
         <div class="col mb-4">
           <div class="card">
-            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/ifb0fb7a1d81e48e5/version/1557919619/algarve-portugal-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
+            <button type="button" class="btn btn-secondary mb-2" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+              Bon Bon
+            </button>
+            <img src="era.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title"> Algarve, PORTUGAL</h5>
+              <h5 class="card-title">Era Istrefi / Bon Bon </h5>
 <!--              <p class="card-text">
                 The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
               </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+           
             </div>
           </div>
         </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i907db3711fae7540/version/1556880855/crete-greece-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Crete, GREECE</h5>
-<!--              <p class="card-text">
-                The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
-              </p> -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <button type="button" name="summer" id="daysofweek-btn"class="btn btn-primary"
-       onclick="summerBtn(this.name)">Hide/Show This Summer </button>
-
-      <h1 class="mb-4 d-none d-md-flex" id="ddeal">Deal of the day</h1>
-        <div class="row d-none d-md-flex" id="dealoftoDay">
-          <div class="col-md-8">
-            <img class="img-fluid" src="https://www.wallpapers13.com/wp-content/uploads/2018/05/Plitvice-Lakes-landscape-photo-National-Park-Croatia-Wallpapers-HD-for-Desktop-and-Mobile-3840x2400-915x515.jpg" alt="" />
-          </div>
+      </div></div> </div><br>
+      
   
-          <div class="col-md-4" id="project">
-            <h3 class="my-3" id="ddeal">Deal of the day</h3>
-            <p>
-              <p>
-                Plitvice Lakes National Park in Croatia is one of the most beautiful natural sights in Europe. 
-                Due to its beauty and significance, this system of 16 interlinked lakes and a large forest complex, were 
-                inscribed on the UNESCO World Heritage site List in 1979. 
-              </p>
-            </p>
-            <h3 class="my-3">Details</h3>
-            <ul>
-            <li>Departures: May – December 2020</li>
-              <li>Duration: 1 Days / 2 Nights</li>
-              <li>Ages: 1 – 90</li>
-              <li>Professional guide</li>
-              <li>Transfers from and to Airport</li>
-              <li>Price From: 285 euro</li>
-            </ul>
+      
+      <button class="btn btn-success mt-5" type="button" data-toggle="collapse" data-target="#rev" aria-expanded="false" aria-controls="collapseE">
+       Reviews
+      </button>
+      <section id="rev">
+        
+  
+        <div class="collapse" id="rev">
+        <h1 class="my-4"> Reviews</h1>
+        <ul class="list-group  my-2 " id="testimonial"> 
+          <li class="list-group-item list-group-item-primary"><b>John Doe said: </b><br/>   So happy with those albums</li>
+          <li class="list-group-item list-group-item-secondary"><b>John Doe said: </b><br/>Best Albums Ever!</li>
+          <li class="list-group-item list-group-item-success"><b>John Doe said: </b><br/>Highly recommend</li>
+          <li class="list-group-item list-group-item-danger"><b>John Doe said: </b><br/>The best!</li>
+          <li class="list-group-item list-group-item-warning"><b>John Doe said: </b><br/>Will listen to them again !</li>
+          <li class="list-group-item list-group-item-info"><b>John Doe said: </b><br/>Perfect songs</li>
+          <li class="list-group-item list-group-item-light"><b>John Doe said: </b><br/>Love those songs</li>
+          <li class="list-group-item list-group-item-dark"><b>John Doe said: </b><br/>Had a lot of fun on this website!</li>
+        </ul>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Add Item</button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label  class="col-form-label">Item Name:</label>
+                    <input type="text" class="form-control" id="item-name">
+                  </div>
+                  <div class="form-group">
+                    <label  class="col-form-label">Item Text:</label>
+                    <input type="text" class="form-control" id="item-text"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="cancelItem()">Cancel</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="addItem()">Submit</button>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- <button type="button" name="dealoftoDay" id="daysofweek-btn"class="btn btn-primary mt-4"
-        onclick="TourhideBtn(this.name)">Hide/Show Today's Deal</button> -->
- 
+    </div>
+    </section> </div>
+
+    <section>
+        <div id="imageCarousel" class="carousel slide mt-4" data-interval="1500"
+        data-ride="carousel" data-pause="hover" data-wrap="true">
+<div class="container-fluid">
+       <ol class="carousel-indicators">
+           <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+           <li data-target="#imageCarousel" data-slide-to="1"></li>
+           <li data-target="#imageCarousel" data-slide-to="2"></li>
+       </ol>
+       <div class="carousel-inner">
+         <div class="carousel-item active">
+             <div class="row" style="padding: 0%;">
+                 <div class="col-2 img-fluid">
+                     <img src="adele.jpg" class="img-responsive">
+                 </div>
+                 <div class="col-2 img-fluid">
+                     <img src="adele.jpg" class="img-responsive">
+                 </div>
+                 <div class="col-2 img-fluid">
+                     <img src="adele.jpg" class="img-responsive">
+                 </div>
+                 <div class="col-2 img-fluid">
+                   <img src="adele.jpg" class="img-responsive" >
+               </div>
+               <div class="col-2 img-fluid">
+                 <img src="adele.jpg" class="img-responsive" >
+             </div>
+             <div class="col-2 img-fluid">
+               <img src="adele.jpg" class="img-responsive" >
+           </div>
+             </div>
+         </div>
+         <div class="carousel-item ">
+           <div class="row ">
+            <div class="col-2 img-fluid">
+              <img src="adele.jpg" class="img-responsive">
+          </div>
+          <div class="col-2 img-fluid">
+              <img src="adele.jpg" class="img-responsive">
+          </div>
+          <div class="col-2 img-fluid">
+              <img src="adele.jpg" class="img-responsive">
+          </div>
+          <div class="col-2 img-fluid">
+            <img src="adele.jpg" class="img-responsive" >
+        </div>
+        <div class="col-2 img-fluid">
+          <img src="adele.jpg" class="img-responsive" >
+      </div>
+      <div class="col-2 img-fluid">
+        <img src="adele.jpg" class="img-responsive" >
+    </div>
+           </div>
+       </div>
+       <div class="carousel-item ">
+        <div class="row ">
+         <div class="col-2 img-fluid">
+           <img src="adele.jpg" class="img-responsive">
+       </div>
+       <div class="col-2 img-fluid">
+           <img src="adele.jpg" class="img-responsive">
+       </div>
+       <div class="col-2 img-fluid">
+           <img src="adele.jpg" class="img-responsive">
+       </div>
+       <div class="col-2 img-fluid">
+         <img src="adele.jpg" class="img-responsive" >
+     </div>
+     <div class="col-2 img-fluid">
+       <img src="adele.jpg" class="img-responsive" >
+   </div>
+   <div class="col-2 img-fluid">
+     <img src="adele.jpg" class="img-responsive" >
+ </div>
+        </div>
+    </div>
+       <a href="#imageCarousel"  class="carousel-control-prev" role ="button" data-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+     </a>
+     <a href="#imageCarousel" class="carousel-control-next"  role ="button" data-slide="next">
+       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+       <span class="sr-only">Next</span>
+     </a>
+    </div>
+       </div>
+     </div>
+    </section>
+    
+<style>
+img{
+     max-width: 100%;
+     max-height: 100%;
+    }
+    .col-2{
+      padding-left:4px!important;
+      padding-right:0!important;
+    }
+    .col-2:hover{
+      transform: scale(1.1);
+    }
+  </style>
 
         
         <div class="card my-4">
@@ -477,7 +672,7 @@
   var clicks5=0;
 
 
-function TourhideBtn(id){
+function hideAlbum(id){
   clicks++
   if(clicks===1){
     let section=document.getElementById(id).style.display='none'
@@ -492,6 +687,7 @@ function TourhideBtn(id){
     clicks=0;
   }
 }
+
 function dealofWeekBtn(id){
   clicks1++
   if(clicks1===1){
@@ -539,6 +735,22 @@ function testimonialBtn(id){
   }
 }
 
+function cancelItem(){
+    console.log('he4re')
+   document.querySelector('#item-name').value=' '
+   document.querySelector('#item-text').value=' '
+  }
+  function addItem(){
+let listsection_ref=document.querySelector('#testimonial')
+console.log(listsection_ref)
+let itemname_ref=document.querySelector('#item-name')
+let itemtext_ref=document.querySelector('#item-text')
+let newli= document.createElement('li')
+newli.className+=' list-group-item'
+newli.innerHTML="<b>"+ itemname_ref.value +"</b>"+' <br/>'+itemtext_ref.value
+listsection_ref.appendChild(newli)
+alert('Item Added')
+}
 </script>
 
 
