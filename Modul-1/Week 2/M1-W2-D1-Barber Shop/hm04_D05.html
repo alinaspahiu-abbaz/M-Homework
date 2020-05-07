@@ -29,7 +29,7 @@ Set a ok-ish color when the input of the forms are valid
     
     body {
          background-color: rgba(76, 100, 92, 0.548);
-         background-image: url(back.jpg);
+         
         
          max-width: 98%;
          margin: 0 auto;
@@ -171,11 +171,11 @@ Write a section with the address of the shop.
 <div class="section">
     <h2> Address of the Shop</h2>
     <p>Hello folks. You can find us on this address. Just click on it, turn your GPS on, and come straight to our shop, to have the best haircut ever!</p>
-   <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8890366365945!2d19.802220715411263!3d41.33302620732637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031a705199cab%3A0xb6d86e1fa214d374!2sZogu%20I%20Zi%20Square!5e0!3m2!1sen!2s!4v1587396042006!5m2!1sen!2s" width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8890366365945!2d19.802220715411263!3d41.33302620732637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031a705199cab%3A0xb6d86e1fa214d374!2sZogu%20I%20Zi%20Square!5e0!3m2!1sen!2s!4v1587396042006!5m2!1sen!2s" width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
        
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-    </script> -->
+    </script>
 </div>
 
  <!-- EXERCISE 6: 
@@ -221,28 +221,22 @@ The field must accept ONLY valid emails (empty email is not a valid email).
 </style>
 <h3>Leave your email here:</h3>
 
-<form class="form" action="#">
-    <label  id="email"> <b>Email:</b></label>
-    <input  type="email" id="emailfield" name="email" placeholder="Type your email here..."  required />
-    <div>
-        <input id="saveButton" type="button" value="save data!" onclick="getUserData()" />
-      </div>
+<form class="form" >
+    <label><b> Email: </b></label>
+    <input id='email'type="email"  placeholder="Type your email here..." required/>
+    
+        <input id="saveButton" type="button" value="save data!" onclick="getEmail()" />
+    
 </form>
 </div>
 <script>
-    function getUserData() {
+    function getEmail() {
         
-        let email = document.getElementById('emailfield').value
-        console.log('EMAIL VALUE IS', email)
-        if (email.includes('@')) {
-          console.log('email is', email)
-          // alert(name + ' ' + email)
-          let userDiv = document.createElement('div')
-          userDiv.innerText = 'you inputted ' + email
-          document.getElementById('body').appendChild(userDiv)
-         
-          document.querySelector('#email').value = '';
-        }
+        let email = document.querySelector('#email').value;
+        console.log("email ", email);
+
+        document.querySelector('#email').value="";
+        
       }
     </script>
 
@@ -271,14 +265,14 @@ Style it as you like it.
   <label for="name"><b>Name</b></label>
   <input type="name" id ="name" placeholder="Enter your name here" name="nameH" >
 
-   <input type="submit" value="Submit" id="saveButton" onclick="GetData">
+   <input type="button" value="Submit" onclick="GetData()">
   </form>
 </div>
 <script>
     function GetData(){
-        let phoneNumber = querySelector('#phoneNumber').value;
-        let dateD = querySelector('#dateD').value;
-        let name = querySelector('#name').value;
+        let phoneNumber = document.querySelector('#phoneNumber').value;
+        let dateD = document.querySelector('#dateD').value;
+        let name = document.querySelector('#name').value;
 
         console.log("PhoneNumber ", phoneNumber);
         console.log("Date ", dateD);
