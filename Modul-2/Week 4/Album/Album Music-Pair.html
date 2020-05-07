@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+        ASSIGNMENT RULES
+        - This is exercise should be done in couples
+        - Implement one exercise each
+        - We suggest you to use Slack or Google Hangouts to speak to each other
+        - The solution must be pushed to the repository and be available for the tutors by the end of the day
+        - You can ask for tutor's help
+        - You can google / use StackOverflow BUT we suggest you to use just the material provided
+        - To test the page, just open it with your default browser.
+        - Use Bootstrap4 classes to render the page.
+        - Use correctly containers and rows in order to have a great display
+        You are implementing a website for a Travel Agency.
+        In the page you can add all the destination you'd like to go in the next future!
+        Ex 1) Implement a navigation bar, connected to all the sections of the page. 
+        Ex 2) Add a logo into the navigation bar ------
+        Ex 3) Add a Jumbotron section in which you present name and claim of the tour operator
+        Ex 4) Implement the "Deal of the Week" section. In this section you'll display 4 destinations.
+         In this section you should have:
+            - 4 destinations per row when the screen is very large
+            - 3 destinations per row when you are on a tablet (or a smaller window)
+            - 2 destinations per row when you are on a small screen
+        Ex 5) Implement the "Welcome Summer" section. In this section you'll propose 6 destinations
+            In this section you should have:
+                - 6 destinations per row when the screen is very large
+                - 3 destinations per row when you are on a tablet (or a smaller window)
+                - 2 destinations per row when you are on a small screen
+        
+        Ex 6) Implement a "Deal of the day" section. In this section you'll have:
+           - 66% of the page with a picture of the destination
+            - 33% with Name, dates, price and a short description
+        Ex 7) Make the "Deal of the day" section disappear when the user is mobile
+        Ex 8) Add to the Welcome Summer destinations a large shadow
+        Ex 9) Create a section Last Minute, in which you'll display the pictures from the destinations as Cards
+        Ex 10) Create a "Testimonial" section, in which the user can find several feedback from fake customers
+        Ex 11) Create a footer with the company information and a button "contact us"
+        Ex 11) Create a button next to each section to collapse and reopen the given section
+        Ex 12) Create a method that counts the number of "travels" on the page
+        Ex 13) Create a modal view with a message and a email field
+        Ex 14) When the user clicks on "contact us" the modal is displayed
+        Ex 15) Create a function that adds a "HOT" badge to all the "Welcome Summer" offers
+        Ex 16) Create a function to delete all "cards" from the page
+      -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+      .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+      }
+     .breadcrumb-item+.breadcrumb-item::before{content:'~'} 
+
+    
+
+    </style>
+  </head>
+  
+  <body>
+
+    <div class="container">
+      <!-- Ex. 1 add a breadcrumb -->
+
+      <nav aria-label="breadcrumb" >
+      <nav class="navbar navbar-expand-lg navbar-dark mb-4" style="background-color: rgb(41, 96, 168);">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">MUSIC ALBUM</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="breadcrumb mr-auto mt-2 mt-lg-0">
+            <li class="breadcrumb-item ">
+              <a  href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="breadcrumb-item">
+              <a  href="#wdeal">Week Deal</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a  href="#summerid">Summer Deal</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a  href="#ddeal">Day Deal</a>
+            </li>
+          </ul>
+          
+        </div> 
+      </nav>
+   <!-- Ex. 2 Create a Jumbotron-->
+      <div class="jumbotron my-4"  id="tourSection" >
+        <h1 class="display-4">My Music Website!</h1>
+        <p class="lead">
+          This website shows only the best musics in the world. 
+        </p>
+        <hr class="my-4" />
+        <div>
+          <div class="row justify-content-center my-3" >
+            <div class="col-6">
+        <div id="carouselExampleSlidesOnly" class="carousel slide justify-content-center " data-ride="carousel">
+          <div class="carousel-inner h-75 ">
+            <div class="carousel-item active ">
+              <img class="d-block" src="music.jpg" alt="First slide" style="height:200px; width:100%">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" style="height:200px; width:100%" src="music11.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block" style="height:200px; width:100%" src="music2.jpg" alt="Third slide">
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      </div>
+      </div>
+        
+      
+      
+
+       <!-- Ex. 3 and 4-->
+      <h3 class="my-4" id="wdeal">Favorite Albums</h3>
+      <section>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-lg-4"  id="dealofweek">
+        <div class="col mb-4">
+          <div class="card">
+            <img src="adele.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Adele / Someone like you</h5>
+<!--           <p class="card-text">
+                The fourth single "Angels" which catapulted Williams to international fame as a solo artist.
+              </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="rafet.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Rafet el Roman / Direniyorum</h5>
+<!--           <p class="card-text">
+                The fourth single "Angels" which catapulted Williams to international fame as a solo artist.
+              </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="eminem.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Eminem / Love Yourself </h5>
+<!--              <p class="card-text">
+                The Edge of Heaven is the third and final studio album from British pop duo Wham!
+              </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="era.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Era Istrefi / Bon Bon </h5>
+<!--              <p class="card-text">
+                The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
+              </p> -->
+              <div class="dropdown ml-5 my-2">
+                <button class="btn btn-outline-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="badge badge-primary">Genres</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">First Sond</a>
+                  <a class="dropdown-item" href="#">Second Song</a>
+                  <a class="dropdown-item" href="#">Third Song</a>
+                </div>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table  class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">Track Order</th>
+            <th scope="col">Title</th>
+            <th scope="col">Length</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="row1">
+            <th scope="row">1</th>
+            <td>Some One Like You</td>
+            <td>3.03</td>
+            
+          </tr>
+          <tr id="row1">
+            <th scope="row">2</th>
+            <td>Direniyorum</td>
+            <td>2.56</td>
+            
+          </tr>
+          <tr id="row1">
+            <th scope="row">3</th>
+            <td>The One</td>
+            <td>4.35</td>
+           
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-outline-secondary" onclick="remove()">Delete</button>
+      <script>
+        
+            function remove() { 
+                document.getElementById("row1").remove(); 
+            } 
+        
+    
+      </script>
+      
+      
+
+
+      <h3 class="my-4" id="summerid">Welcome Summer</h3>
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 shadow p-3 mb-5 bg-white rounded" id="summer">
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://live.staticflickr.com/8319/27942862924_41e24859e0_b.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Pigeons Rock, LEBANON</h5>
+<!--              <p class="card-text">
+                The songs "Get the Party Started", "Don't Let Me Get Me" and "Just like a Pill" became hits on the Billboard Hot 100.
+              </p>-->
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i3d13dbbe7f3ac546/version/1556877470/saint-barthelemy-france-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">St. Barthelemy, FRANCE </h5>
+<!--              <p class="card-text">
+                The Edge of Heaven is the third and final studio album from British pop duo Wham!
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i22883c9fa879fc30/version/1557919619/san-sebastian-spain-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">San Sebastian, SPAIN</h5>
+<!--              <p class="card-text">
+                The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/idee17aecc71437aa/version/1556884841/ventspils-latvia-best-beach-destinations.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Venpils, LATVIA</h5>
+<!--           <p class="card-text">
+                The fourth single "Angels" which catapulted Williams to international fame as a solo artist.
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/ifb0fb7a1d81e48e5/version/1557919619/algarve-portugal-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title"> Algarve, PORTUGAL</h5>
+<!--              <p class="card-text">
+                The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
+              </p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col mb-4">
+          <div class="card">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i907db3711fae7540/version/1556880855/crete-greece-best-beach-destinations-europe.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Crete, GREECE</h5>
+<!--              <p class="card-text">
+                The Outfield were an English rock and Are best remembered for their hit single, "Your Love".
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" name="summer" id="daysofweek-btn"class="btn btn-primary"
+       onclick="summerBtn(this.name)">Hide/Show This Summer </button>
+
+      <h1 class="mb-4 d-none d-md-flex" id="ddeal">Deal of the day</h1>
+        <div class="row d-none d-md-flex" id="dealoftoDay">
+          <div class="col-md-8">
+            <img class="img-fluid" src="https://www.wallpapers13.com/wp-content/uploads/2018/05/Plitvice-Lakes-landscape-photo-National-Park-Croatia-Wallpapers-HD-for-Desktop-and-Mobile-3840x2400-915x515.jpg" alt="" />
+          </div>
+  
+          <div class="col-md-4" id="project">
+            <h3 class="my-3" id="ddeal">Deal of the day</h3>
+            <p>
+              <p>
+                Plitvice Lakes National Park in Croatia is one of the most beautiful natural sights in Europe. 
+                Due to its beauty and significance, this system of 16 interlinked lakes and a large forest complex, were 
+                inscribed on the UNESCO World Heritage site List in 1979. 
+              </p>
+            </p>
+            <h3 class="my-3">Details</h3>
+            <ul>
+            <li>Departures: May – December 2020</li>
+              <li>Duration: 1 Days / 2 Nights</li>
+              <li>Ages: 1 – 90</li>
+              <li>Professional guide</li>
+              <li>Transfers from and to Airport</li>
+              <li>Price From: 285 euro</li>
+            </ul>
+          </div>
+        </div>
+        <!-- <button type="button" name="dealoftoDay" id="daysofweek-btn"class="btn btn-primary mt-4"
+        onclick="TourhideBtn(this.name)">Hide/Show Today's Deal</button> -->
+ 
+
+        
+        <div class="card my-4">
+          <footer class="bg-secondary">
+            <div class="row row-col-2">
+              <div class="col">
+            <form class="m-5">
+              <label for="exampleFormControlInput1">Contact Me</label>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+               <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+              </div>
+
+            </form>
+                 
+          <div class="col">
+            
+                
+            <style>
+              ol li a{
+                color:black;
+                padding:30px;
+                margin:30px;
+                margin-bottom:30px;
+
+              }
+            </style>
+                
+         <ol class="list-unstyled mt-5">
+             <li class="mb-5"><a href="#">Home</a></li>
+            <li class="mb-5"> <a  href="#">Week Deal</a></li>
+             <li class="mb-5"> <a  href="#">Summer Deal</a></li>
+             <li class="mb-5"> <a  href="#">Day Deal</a></li>
+        </ol>
+                  
+                </div> 
+              </nav>
+            
+          </div>
+          </div>
+      </footer>
+     
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+<script>
+  var clicks=0;
+  var clicks1=0;
+  var clicks2=0;
+  var clicks3=0;
+  var clicks4=0;
+  var clicks5=0;
+
+
+function TourhideBtn(id){
+  clicks++
+  if(clicks===1){
+    let section=document.getElementById(id).style.display='none'
+    
+  }
+
+  
+  
+  if(clicks===2)
+  {
+    let section=document.getElementById(id).style.display='block'
+    clicks=0;
+  }
+}
+function dealofWeekBtn(id){
+  clicks1++
+  if(clicks1===1){
+    let section=document.getElementById(id).style.display='none'
+    
+  }
+
+  
+  
+  if(clicks1===2)
+  {
+    let section=document.getElementById(id).style.display='flex'
+    clicks1=0;
+  }
+}
+function summerBtn(id){
+  clicks2++
+  if(clicks2===1){
+    let section=document.getElementById(id).style.display='none'
+    
+  }
+
+  
+  
+  if(clicks2===2)
+  {
+    let section=document.getElementById(id).style.display='flex'
+    clicks2=0;
+  }
+}
+function testimonialBtn(id){
+  console.log('here')
+  clicks3++
+  if(clicks3===1){
+    let section=document.getElementById(id).style.display='none'
+    
+  }
+
+  
+  
+  if(clicks3===2)
+  {
+    let section=document.getElementById(id).style.display='block'
+    clicks3=0;
+  }
+}
+
+</script>
+
+
+
+  </body>
+</html>
