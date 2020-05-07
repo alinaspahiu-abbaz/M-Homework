@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- EXERCISE 1:
+Specify the title, the charset (UTF-8) and the viewport of the page.
+-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title> HomeWrok Day 5</title>  
+<!-- EXERCISE 2:  
+Style h1 color, alignment, size as you like it;
+Style h2 color, alignment, size as you like it;
+Style page background color as you like it
+[EXTRA]
+Set a red-ish color when the input of the forms are invalid
+Set a ok-ish color when the input of the forms are valid
+-->
+<style>
+    h1{
+        color:Black;
+        text-align: center;
+        size:35px
+    }
+    h3{
+        color:Black;
+        text-align: center;
+        size:25px
+    }
+    
+    body {
+         background-color: rgba(76, 100, 92, 0.548);
+         background-image: url(back.jpg);
+        
+         max-width: 98%;
+         margin: 0 auto;
+         padding: 0 15px;
+         
+        }
+    
+  </style>  
+</head>
+
+<body>
+<!-- EXERCISE 11
+ Add a navbar with the links to the sections
+-->
+<style>
+    #navbar{
+        background:rgb(57, 100, 87);
+             border:2px solid rgb(95, 56, 5);
+             border-radius:15px;
+             color:black;
+             width: 100%;
+             text-align: left;
+             padding: 10px;
+             margin:2px;
+             position: relative;
+             float:left;
+             overflow: hidden;
+             
+
+        }
+    #navbar ul{
+        padding: 0;
+        list-style: none;
+        text-align: right;
+    }    
+    #navbar li{
+        display: inline;
+    }
+    #navbar a{
+        color: black;
+        text-decoration: none;
+        font-size: 30px;
+        padding: 55px;
+    }
+    #navbar a:hover{color:red;}
+</style>
+<nav id="navbar">
+    <ul>
+        <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+</nav>
+<!-- EXERCISE 3:
+ Write the main title of the barber shop and a smaller claim.
+ -->
+ <style>
+    .section3{
+             background:rgb(172, 196, 156);
+            
+             border:2px solid rgb(58, 37, 10);
+             border-radius:15px;
+             color:black;
+             width: 97%;
+             text-align: left;
+             padding: 10px;
+             margin:2px;
+             position: relative;
+             float:left;
+             overflow: hidden;
+   
+
+    }
+    .section4{
+             background:rgb(118, 141, 107);
+             
+             border:2px solid rgb(58, 37, 10);
+             border-radius:15px;
+             color:black;
+             width: 97%;
+             text-align: left;
+             padding: 10px;
+             margin:2px;
+             position: relative;
+             float:left;
+             overflow: hidden;
+
+    }
+    </style>
+ <div class="section4">
+<h1>Barber Shop John Doe</h1>
+<h3>The best berber in the town!!</h3>
+</div>
+ <!-- EXERCISE 4: 
+ Write a section in which you explain a current promotion
+-->
+<style>
+    .section{
+             background:rgb(146, 199, 155);
+             border:2px solid black;
+             border-radius:15px;
+             color:black;
+             width: 63%;
+             text-align: left;
+             padding: 10px 5px;
+             margin:2px;
+             position: relative;
+             float:left;
+             overflow: hidden;
+
+    }
+
+    .section2{
+             background:rgb(175, 224, 183);
+             border:2px solid black;
+             border-radius:15px;
+             color:black;
+             width: 31%;
+             text-align: left;
+             padding: 10px 5px;
+             margin:2px;
+             position:initial;
+             float:right;
+             overflow: hidden;
+             
+             
+
+    }
+</style>
+<div class="section3">
+    <h2>Current Promotion</h2>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, velit, quidem aperiam maxime officiis ad dolor sequi incidunt asperiores sapiente quam distinctio nam culpa, optio inventore reiciendis numquam similique omnis?</p>
+</div>
+
+ <!-- EXERCISE 5: 
+Write a section with the address of the shop.
+[OPTIONAL] Link this address to Google Maps page.
+-->
+<div class="section">
+    <h2> Address of the Shop</h2>
+    <p>Hello folks. You can find us on this address. Just click on it, turn your GPS on, and come straight to our shop, to have the best haircut ever!</p>
+   <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.8890366365945!2d19.802220715411263!3d41.33302620732637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031a705199cab%3A0xb6d86e1fa214d374!2sZogu%20I%20Zi%20Square!5e0!3m2!1sen!2s!4v1587396042006!5m2!1sen!2s" width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+       
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script> -->
+</div>
+
+ <!-- EXERCISE 6: 
+Write a "Leave Email" form. 
+The form must have a field for the Email and a button for the submission of the field itself.
+The field must accept ONLY valid emails (empty email is not a valid email).
+​[OPTIONAL] On submit click, console log the value of the email
+ -->
+ <div class="section2">
+<style>
+    .form{
+     width:100%;
+     padding: 12px 20px;
+     margin: 8px 0px;
+     display:inline-block;
+     border: 1px solid black;
+     border-radius: 4px;
+     box-sizing: border-box;
+    }
+    input{
+         width:100%;
+         padding: 12px 20px;
+         margin: 8px 0px;
+         display:inline-block;
+         border: 1px solid black;
+         border-radius: 4px;
+         
+         box-sizing: border-box;
+        }
+
+    input[type=submit]{
+         width:60%;
+         padding: 12px 27px;
+         margin: 0 auto;
+         display:inline-block;
+         border: 1px solid black;
+         border-radius: 8px;
+         cursor: pointer;
+         box-sizing: border-box;
+         display:flex;
+        }
+    input[type=submit]:hover{background-color: #45a049;}
+</style>
+<h3>Leave your email here:</h3>
+
+<form class="form" action="#">
+    <label  id="email"> <b>Email:</b></label>
+    <input  type="email" id="emailfield" name="email" placeholder="Type your email here..."  required />
+    <div>
+        <input id="saveButton" type="button" value="save data!" onclick="getUserData()" />
+      </div>
+</form>
+</div>
+<script>
+    function getUserData() {
+        
+        let email = document.getElementById('emailfield').value
+        console.log('EMAIL VALUE IS', email)
+        if (email.includes('@')) {
+          console.log('email is', email)
+          // alert(name + ' ' + email)
+          let userDiv = document.createElement('div')
+          userDiv.innerText = 'you inputted ' + email
+          document.getElementById('body').appendChild(userDiv)
+         
+          document.querySelector('#email').value = '';
+        }
+      }
+    </script>
+
+<!-- EXERCISE 7: 
+Create an "book haircut" form.
+The form must have:
+- phone number
+- date
+- name
+​
+Phone number and date are mandatory, the name is optional.
+Create a form with a submit button, ready to be used in a real context.
+Style it as you like it.
+[OPTIONAL] On submit click, console log an object containing Phone Number, Date and Name.
+-->
+<div class="section2">
+
+
+  <form class="form" action="#">
+  <label  for="phoneNumber"><b> Phone Number:</b></label>
+  <input type="number" id="phoneNumber" name="phoneNumber" placeholder="Type your phone number here...only numbers" required>
+
+  <label for="date"><b>Date</b></label>
+  <input type="date" id="dateD" placeholder="Enter the date you want to book" name="date" required>
+
+  <label for="name"><b>Name</b></label>
+  <input type="name" id ="name" placeholder="Enter your name here" name="nameH" >
+
+   <input type="submit" value="Submit" id="saveButton" onclick="GetData">
+  </form>
+</div>
+<script>
+    function GetData(){
+        let phoneNumber = querySelector('#phoneNumber').value;
+        let dateD = querySelector('#dateD').value;
+        let name = querySelector('#name').value;
+
+        console.log("PhoneNumber ", phoneNumber);
+        console.log("Date ", dateD);
+        console.log("Name ", name);
+
+        document.querySelector("#phoneNumber").value="";
+        document.querySelector("#dateD").value="";
+        document.querySelector("#name").value="";
+        
+    }
+</script>
+
+<!-- EXERCISE 8: 
+Create a table with the price for the services of the barber shop
+-->
+<div class="section">
+   <style>
+    table, th, td{
+         border: 1px solid black;
+         border-collapse:collapse;
+         }
+    th, td{
+          padding:5px;
+          text-align:left;
+          }
+    </style>
+    
+        
+ <h2>Table for the prices </h2>
+
+    <table style="width:100%">
+        <th></th>
+    <th> Name </th>
+    <th>Price</th>
+    <tr><td>1. </td><td> Haircut </td> <td>15$</tr>
+    <tr><td> 2.</td><td> Face Shave </td> <td>12$</tr>
+    <tr><td> 3.</td><td> Cut & Shave </td> <td>20$</tr>
+    <tr><td> 4.</td><td> Head Shave </td> <td>12$</tr>
+    <tr><td> 5.</td><td> Beard Trim</td> <td>8$</tr>
+    <tr><td> 6.</td><td> Line Uo </td> <td>8$</tr>
+    <tr><td> 7.</td><td> HairWash </td> <td>6$</tr>
+
+    </table>
+
+</div>
+
+<!-- EXERCISE 9: 
+Place here a footer including:
+- Name of the Barber Shop
+- Address
+- Phone Number
+- Email (should be a clickable link)
+-->
+<style>
+    #footer{
+        background:rgb(57, 100, 87);
+             border:2px solid black;
+             border-radius:15px;
+             color:black;
+             width: 100%;
+             text-align: center;
+             padding: 10px;
+             margin:2px;
+             position: relative;
+             float:left;
+             overflow: hidden;
+    }
+</style>
+<footer id="footer">
+    <p>Berber Shop: JohnDoe;   Address: Tirane, Albania; phone: 069123456; <a href>email: john.doe@gmail.com</a></p> 
+</footer>
+<script>
+    //EXERCISE 11
+    //Write on console the size (height and width) of the current browser window
+    //Write on console the size (height and width) of the current page window
+    function browserWindow(){
+        let w=window.innerWidth;
+        let h = window.innerHeight;
+        console.log("Width of current browser window: " + w); 
+        console.log("Height of current browser window: " + h);
+    }
+    browserWindow();
+
+    function pageWindow(){
+        let w = window.outerWidth;
+        let h = window.outerHeight;
+        console.log("Width of current page window: " + w); 
+        console.log("Height of current page window: " + h);
+    }
+    pageWindow();
+
+ </script>
+</body>
+  </html>
+
+ 
