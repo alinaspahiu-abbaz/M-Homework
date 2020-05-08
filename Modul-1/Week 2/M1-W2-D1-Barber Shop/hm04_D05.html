@@ -233,18 +233,21 @@ The field must accept ONLY valid emails (empty email is not a valid email).
     function getEmail() {
         
         let email = document.querySelector('#email').value;
-        if(email==0) {
+        if(email!=="" && email.includes('@')) {//nese email eshte bosh
+            document.querySelector('#email').style.borderColor = '#000';
+            console.log("Your email is: ", email);
+            document.querySelector('#email').value="";
+            
+        } else {
+            
+            
+
             let message=document.createElement('p');
             message.innerText = "Please fill out the Email Field!";
             document.querySelector('#email').style.borderColor="red";
             document.querySelector('.form').appendChild(message);
             console.log('Please, fill out the email field!');
-            console.log("Your email is: ", email);
-        } else {
-            
-            document.querySelector('#email').style.borderColor = '#000';
-            console.log("Your email is: ", email);
-            document.querySelector('#email').value="";
+            console.log("Your email is uncorect!");
         }
         
 
