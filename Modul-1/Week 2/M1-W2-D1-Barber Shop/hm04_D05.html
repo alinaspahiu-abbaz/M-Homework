@@ -222,10 +222,10 @@ The field must accept ONLY valid emails (empty email is not a valid email).
 <h3>Leave your email here:</h3>
 
 <form class="form" >
-    <label><b> Email: </b></label>
-    <input id='email'type="email"  placeholder="Type your email here..." required/>
+    <label ><b> Email: </b></label>
+    <input id='email' type="email"  placeholder="Type your email here..." required/>
     
-        <input id="saveButton" type="button" value="save data!" onclick="getEmail()" />
+    <input id="saveButton" type="button" value="save data!" onclick="getEmail()" />
     
 </form>
 </div>
@@ -233,9 +233,22 @@ The field must accept ONLY valid emails (empty email is not a valid email).
     function getEmail() {
         
         let email = document.querySelector('#email').value;
-        console.log("email ", email);
+        if(email==0) {
+            let message=document.createElement('p');
+            message.innerText = "Please fill out the Email Field!";
+            document.querySelector('#email').style.borderColor="red";
+            document.querySelector('.form').appendChild(message);
+            console.log('Please, fill out the email field!');
+            console.log("Your email is: ", email);
+        } else {
+            
+            document.querySelector('#email').style.borderColor = '#000';
+            console.log("Your email is: ", email);
+            document.querySelector('#email').value="";
+        }
+        
 
-        document.querySelector('#email').value="";
+        
         
       }
     </script>
