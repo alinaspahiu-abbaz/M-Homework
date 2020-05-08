@@ -1,0 +1,28 @@
+body{
+    background-color: #D8D8D8;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+#navbarDropdown{
+    font-weight: bold;
+    color: #cccccc;
+}
+
+
+.high{
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    border-bottom: solid 1px rgb(59, 59, 59);
+}
+
+
+
+.price{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 12px;
+}
