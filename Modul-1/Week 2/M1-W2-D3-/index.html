@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <!-- <script>
+      
+
+ /* 
+
+      
+
+      
+
+      /* EXERCISE 5
+            Write a function to add a new item ONLY to the second list
+            */
+
+      fuction addToTheSecond(content) {}
+
+      /* EXERCISE 6
+           Write a function to add a second paragraph to the div
+            */
+
+      function addParagraph(content) {}
+
+      /* EXERCISE 7
+           Write a function to make the first UL disappear
+            */
+
+      function firstUlDisappear() {}
+
+      /* EXERCISE 8
+            Write a function to make the background of every UL green
+            */
+
+      function paintItGreen() {}
+
+      /* EXERCISE 9
+            Make the heading of the page changing color every time the user clicks on it
+            */
+
+      function makeItClickable() {}
+
+      /* EXERCISE 10
+          Create a new welcome alert message when the page successfully loads
+            */
+
+      window.onload = function () {}
+
+      /* EXERCISE 11
+            Use HTML5 tags to divide sections, headers etc 
+            */
+    </script> -->
+
+    <style>
+      .myHeading {
+        color: red;
+      }
+    </style>
+    <title>Index</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>This is the title of the page</h1>
+      <h2>This is the subtitle of the page</h2>
+    </div>
+
+    <div>
+      <hr />
+
+      <ul id="firstList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <ul id="secondList">
+        <li>1st</li>
+        <li>2nd</li>
+        <li>3rd</li>
+      </ul>
+
+      <a href="strive.school">This link goes to Strive School</a>
+
+      <div>
+        <p>This text is just for the exercise</p>
+      </div>
+    </div>
+
+    <div>
+      <p>And this text is just for the exercise too!</p>
+    </div>
+
+    <script>
+        /* EXERCISE 1
+            Write a function to change the document title of the page in something else
+            */
+
+      function changeTitle(s) {
+            let newTitle = document.querySelector('title')
+            newTitle.innerText = "Week2-Day3-Homework-Dom";
+            // console.log(changeTitle(newTitle)); - error
+          }
+          changeTitle()
+
+        /*
+         EXERCISE 2
+            Write a function to change the class of the H1 on a page in "myHeading"
+           */
+
+      function addClassToHeading() {
+            let hClass = document.querySelector('h1');
+            hClass.classList.add('myHeading');
+      }
+      addClassToHeading();
+
+      /* EXERCISE 3
+            Write a function to change the text of only the p which are child of a div
+            */
+
+            function changePcontent() {
+                  let changeParagraph = document.querySelector('div p');
+                  changeParagraph.innerText="I am a changed Paragraph of exercise 3";
+                  console.log(changeParagraph)
+            }
+            changePcontent();
+            // Kur e bej querySelector funksionon mire. Mirepo kur e bej querySelectorAll kam probleme.
+      
+      /* EXERCISE 4
+            Write a function to change the destination of every link to https://www.google.com
+            */
+
+            function changeUrls() {
+                  let changeLink = document.querySelectorAll('a href')
+                  changeLink.innerText="https://www.google.com"
+
+            }
+            changeUrls()
+     
+    </script>
+  </body>
+</html>
