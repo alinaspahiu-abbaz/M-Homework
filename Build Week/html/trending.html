@@ -16,35 +16,37 @@
   </head>
   <body>
 
-<div class="container-fluid p-0">
+<div class="container-fluid">
   <div class="row"> 
       
-    <div class="col-2 text-light"> <!-- Nav Col -->
+    <div class="col-md-2 text-light"> <!-- Nav Col -->
          <div><!-- nav div-->
            <nav>
-             <ul class="d-flex flex-column align-items-start py-3">
-                 <li class="mb-3"> Spotify</li>
-                 <li class="mb-3"><i class="fa fa-home"></i> Home </li>
-                 <li class="mb-3"><i class="fa fa-search"></i> Search </li>
-                 <li ><i class="fa fa-bookmark"></i></i> Library </li>
+             <ul class="d-flex flex-column mx-4 mb-0 px-2">
+                 <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><i class="fa fa-spotify"></i> Spotify</li>
+                 <li class="mb-3 "><a href="#"><i class="fa fa-home"></i> Home </a></li>
+                 <li class="mb-3 "><a href="#"><i class="fa fa-search"></i> Search </a></li>
+                 <li class=""><a href="#"><i class="fa fa-bookmark"></i></i> Library </a></li>
                  <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
                  <li > <button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></li>
-                 <li class="p d-flex align-items-center"> Cookie | Privacy </li>
-                 <li class="p" > Policy</li>
+                 <li class="p d-flex justify-content-center"> Cookie | Privacy
+                   <li class="p d-flex justify-content-center pb-5" > Policy</li>
+                 </li>
+                 
              </ul>
            </nav>
         </div> <!-- end of nav div-->
     </div><!--end of Nav Col-->
 
-    <div class="col-10 p-0">
+    <div class="col-9 p-0">
       <div class="row">
         <nav class="nav-2 p-0 m-0">
           <ul class="d-flex align-items-center justify-content-center">
-              <li class="p-3"> Trending</li>
-              <li class="p-3"> PODCAST</li>
-              <li class="p-3"> MOODS AND GENRES </li>
-              <li class="p-3"> NEW RELEASES </li>
-              <li class="p-3"> DISCOVER</li> 
+              <li class="p-3"><a href="#"> Trending</a></li>
+              <li class="p-3"><a href="#"> PODCAST</a></li>
+              <li class="p-3"><a href="#"> MOODS AND GENRES </a></li>
+              <li class="p-3"><a href="#"> NEW RELEASES</a> </li>
+              <li class="p-3"><a href="#">DISCOVER</a></li> 
           </ul>
         </nav> 
       </div><!--Row-->
@@ -67,7 +69,7 @@
        <div class="row "> <!-- h1-->
         <div class="col ml-5 mb-0 mt-5" style="width: 100%;"> <h1> Classifiche</h1></div>
       </div>
-     <div class="row d-flex flex-row justify-content-center mx-5 mb-0"  style="width: 100%;">
+     <div class="row d-flex flex-row  mx-5 mb-0"  style="width: 100%;">
        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 justify-content-start mr-3">
     
           <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/t50.png"> <p class="d-flex justify-content-center">Top 50 - Italy</p> </div>
@@ -99,24 +101,29 @@
 
             </div>
             <div class="col-8">
-              <div class="row">
-                <i class="fa fa-random pr-4"></i>
-                <i class="fa fa-step-backward pr-4"></i>
-                <i class="fa fa-play-circle pr-4"></i>
-                <i class="fa fa-step-forward pr-4"></i>
-                <i class="fa fa-repeat pr-4"></i>
+              <div class="row justify-content-center">
+                <i class="fa fa-random pr-4" style="font-size:x-large;"></i>
+                <i class="fa fa-step-backward pr-4" style="font-size:x-large;"></i>
+                <i class="fa fa-play-circle pr-4" style="font-size:x-large;"></i>
+                <i class="fa fa-step-forward pr-4" style="font-size:x-large;"></i>
+                <i class="fa fa-repeat pr-4" style="font-size:x-large;"></i>
+
+                
+
+                
 
               </div>
               <div class="row">
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress progress-bar">
+               <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
+                
 
               </div>
 
             </div>
-            <div class="col-2">
-              <i class="fa fa-volume-up"></i>
+            <div class="col-2 align-items-center">
+              <i class="fa fa-volume-up" style="font-size:x-large;"></i>
 
             </div>
           </div>

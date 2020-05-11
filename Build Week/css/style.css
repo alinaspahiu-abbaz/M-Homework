@@ -1,6 +1,6 @@
 body { 
     background-color: rgba(7, 7, 65, 0.664);
-    background: linear-gradient(to right, rgb(22, 97, 194), rgb(1, 18, 29));
+    background: linear-gradient(to right, rgb(33, 73, 126), rgb(1, 11, 19));
     width: 100%;
     height: 100vh
 
@@ -24,6 +24,27 @@ ul {
     flex: 1 0 auto;
 }
 
+ul li a{
+    color:white;
+    
+}
+
+ ul li a:hover{
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+    border-bottom:3px solid rgb(8, 211, 8) !important; 
+    
+}
+
+.a2:hover {
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+    border-left:3px solid rgb(8, 211, 8) !important; 
+    border-bottom:none !important;
+}
+
 .nav-2 {
     background-color: transparent;
     color:white ;
@@ -35,12 +56,12 @@ ul {
 }
 .btnBorder {
     border-radius:40px;
-    width:200%;
+    width:100%;
 }
 
 .nav-2 ul {
     height: 50px;
-    width: 100%;
+    width: 700%;
 }
 h1 {
     color:white;
@@ -56,4 +77,25 @@ p {
     width: 100vh;
    
   }
+
+  .progress-bar{
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.progress-bar2{
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 
