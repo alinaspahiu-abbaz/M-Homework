@@ -33,8 +33,12 @@ ul li a{
     font-weight: bold !important;
     color:white;
     text-decoration: none;
-    border-bottom:3px solid rgb(8, 211, 8) !important; 
     
+    
+}
+
+.a1:hover {
+    border-bottom:3px solid rgb(8, 211, 8) !important; 
 }
 
 .a2:hover {
