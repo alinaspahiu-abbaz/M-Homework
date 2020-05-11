@@ -33,9 +33,7 @@ ul li a{
     font-weight: bold !important;
     color:white;
     text-decoration: none;
-    
-    
-}
+  }
 
 .a1:hover {
     border-bottom:3px solid rgb(8, 211, 8) !important; 
@@ -101,5 +99,7 @@ p {
     margin-right: 10px;
     margin-left: 10px;
 }
+
+
 
 
