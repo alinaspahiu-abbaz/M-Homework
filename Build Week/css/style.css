@@ -33,6 +33,10 @@ ul {
     margin: 20px;
    
 }
+.btnBorder {
+    border-radius:40px;
+    width:200%;
+}
 
 .nav-2 ul {
     height: 50px;
