@@ -1,0 +1,45 @@
+body { 
+    background-color: rgba(7, 7, 65, 0.664);
+    background: linear-gradient(to right, rgb(22, 97, 194), rgb(1, 18, 29));
+    width: 100vh;
+    height: 100vh
+
+}
+
+nav {
+    background-color: black;
+    justify-content: flex-start;
+    position: relative;
+    float:left;
+    margin-left: -10%;
+    margin-bottom:0;
+}
+
+ul {
+    list-style-type: none;
+    height: 100vh;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.nav-2 {
+    background-color: transparent;
+    color:red ;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    clear: both;
+}
+
+.nav-2 ul {
+    height: 50px;
+}
+
+
+#sticky-footer {
+    width: 100vh;
+   
+  }
+
