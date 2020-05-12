@@ -36,7 +36,22 @@ ul li a{
   }
 
 .a1:hover {
-    border-bottom:3px solid rgb(8, 211, 8) !important; 
+    color: green;
+    display: inline-block;
+    position: relative;
+
+}
+
+.a1:hover::after {
+    content: '';
+    height: 4px;
+    border-radius: 30px;
+    width:30%;
+    background-color: rgb(4, 179, 4);
+    position: absolute;
+    left:calc(50% - 15%);
+    bottom:0;
+    top:0.5;
 }
 
 .a2:hover {
@@ -56,6 +71,8 @@ ul li a{
     margin: 20px;
    
 }
+
+
 .btnBorder {
     border-radius:40px;
     width:100%;
