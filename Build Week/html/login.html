@@ -15,7 +15,7 @@
   <body>
     <hr>
     <div class="tilte d-flex justify-content-center pt-2">
-      <img src="../img/login.png" alt="Spotify logo" width="200px">
+      <a href="trending.html"><img src="../img/login.png" alt="Spotify logo" width="200px"></a>
     </div>
     <hr>
     <div class="container-fluid_login">
@@ -30,19 +30,20 @@
         <input type="text" name="username" class="mb-2" placeholder="Email address or username" />
         <input type="password" name="passwrod" placeholder="Password">
 
-             <div class="row row-cols-3 mt-2">
-                <div class="col-2 mr-0 pr-0">
-                    <label class="checkbox-label">
-                      <input type="checkbox"> 
-                      <span class="checkbox-custom"></span>
-                    </label>
+             <div class="row row-cols-2 mt-2">
+                <div class="col-6 flex-row justify-content-start align-items-center">
+                  <form>
+
+                    <input type="checkbox" class="d-flex justify-content-start" id="rememberMe" name="rememberMe" value=""> 
+                    <label for="remember_me"> Remember Me</label>
+                     
+                    
+                  </form>
                 </div>
 
-                <div class="col-5 ml-0 pl-0">
-                   <label for=""> Remember me</label>
-                </div>
+                
 
-                <div class="col-5">
+                <div class="col-6">
                   <button type ="button" id="bt3" class="btn btn-success w-100">LOG IN</button>
                 </div>
             </div>

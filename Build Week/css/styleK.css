@@ -165,7 +165,7 @@ footer button {
 }
 
 .container-fluid_login .content_login{
-    max-width: 450px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 10px;
     font-weight: 700;
@@ -229,9 +229,13 @@ footer button {
 .login_footer {
     
     color:grey;
-    font-size: smaller;
+    font-size: 9px;
 }
-.checkbox-label input {
+
+.login_footer a{
+    color: green;
+}
+/* .checkbox-label input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -299,4 +303,4 @@ footer button {
     opacity: 0;
     z-index: 999;
     transition: all 0.3s ease-out;
-}
+} */
