@@ -54,10 +54,6 @@ ul li a{
     top:0.5;
 }
 
-.albumOverflow{
-    overflow: auto;
-}
-
 .a2:hover {
     font-weight: bold !important;
     color:white;
@@ -130,10 +126,5 @@ p {
     
     color:grey;
     font-size: smaller;
-}
-
-@media(min-width:750px),(max-width:992px){
-
-    
 }
 
