@@ -1,10 +1,20 @@
-body {
-    border:5px solid green;
-}
+body 
 
 a{
     color:green;
 }
+
+.nav-2 {
+    background-color: transparent;
+    color:white ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+   
+}
+
+
 
 /* Don't display Spotify NavBar on small and ekstra small device */
 @media(max-width: 767px){
@@ -16,6 +26,15 @@ a{
 
 @media (max-width: 575px){
     #nav1-medium {
+        display: none;
+    }
+    .nav-2{
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    .nav-2 {
         display: none;
     }
 }

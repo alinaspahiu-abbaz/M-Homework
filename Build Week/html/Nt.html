@@ -7,8 +7,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/styleNew.css" />
+    <link rel="stylesheet" href="../css/styleK.css" />
     <title>Hello, world!</title>
   </head>
   <body>
@@ -37,14 +39,14 @@
 
 
     <!-- Spotify Nav Part-->
-    <div class="col-3"> <!-- Spotify Nav Col -->
+    <div class="col-md-4 col-lg-3 col-xl-2"> <!-- Spotify Nav Col -->
       <div class=" d-md-block d-sm-none" ><!-- nav div-->
         <nav id="nav1-medium"class="">
           <ul class="d-flex flex-column mx-4 mb-0 px-2">
               <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><a href="trending.html"><i class="fa fa-spotify"></i> Spotify</a></li>
-              <li class="mb-3 a2"><a href="#"><i class="fa fa-home"></i> Home </a></li>
-              <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search"></i> SearchK </a></li>
-              <li class="a2"><a href="#"><i class="fa fa-bookmark"></i></i> LibraryE </a></li>
+              <li class="mb-3 a2"><a href="#"><i class="fa fa-home pl-3"></i> Home </a></li>
+              <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search pl-3"></i> SearchK </a></li>
+              <li class="a2"><a href="#"><i class="fa fa-bookmark pl-3"></i></i> LibraryE </a></li>
               <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
               <li > <a href="login.html"><button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></a></li>
               <div class="d-flex my-md-3 justify-content-center">Cookie | Privacy<br>
@@ -54,10 +56,60 @@
      </div> <!-- end of nav div-->
  </div><!--end of Spotify Nav Col-->
 
- <div class="col-9"
+ 
+   <!-- Second Column -->
+    <!-- Colomn of Second Nav and 2 Rows With Albums-->
+    <div class="col-md-8 col-lg-9 col-xl-10"> <!-- Second Column-->
+      <div class=" "> <!-- Overflow-->
+
+      <div class="row">
+        <nav class="nav-2"> 
+          <ul class="d-flex justify-content-center p-0">
+              <li class="p-3 a1"><a href="#"> Trending</a></li>
+              <li class="p-3 a1"><a href="#"> PODCAST</a></li>
+              <li class="p-3 a1"><a href="#"> MOODS AND GENRES </a></li>
+              <li class="p-3 a1"><a href="#"> NEW RELEASES</a> </li>
+              <li class="p-3 a1"><a href="#">DISCOVER</a></li> 
+          </ul>
+        </nav> 
+      </div><!--Row-->
+    <!-- End of Second Nav Part-->
+
+ </div>
       
 </div><!-- Main Row -->
     </div><!-- end of container-->
+
+    <!--footer-->
+<footer>
+  <div class="row light-gray-bg">
+    <div class="col-3 d-flex p-2 pl-2 align-center">
+     
+    </div>
+    <div class="col p-1">
+      <div class="row-1">
+        <div id="icons" class="col d-flex justify-content-center align-center">
+          <button><i class="fa fa-random pr-2 pt-1"></i></button>
+          <button><i class="fa fa-step-backward pr-2 pt-1"></i></button>
+          <button id="play"><i class="fa fa-play-circle pr-2"></i></button>
+          <button><i class="fa fa-step-forward pr-2 pt-1"></i></button>
+          <button><i class="fa fa-retweet pt-1"></i></button>
+        </div>
+        <div class="col d-flex">
+          <label>0:00</label>
+          <div class="progress-bar"><div class="middle-align progress-bar__bg"><div class="progress-bar__fg_wrapper"><div class="progress-bar__fg" style="transform: translateX(-100%);"></div></div><button aria-label="Change progress" class="middle-align progress-bar__slider" style="left: 0%;"></button></div></div>
+          <label>3:21</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 d-flex p-2 pl-2 justify-content-end">
+      <i class="fa fa-bars ml-3 pt-3"></i>
+      <i class="fa fa-headphones ml-3 pt-3"></i>
+      <i class="fa fa-volume-up ml-3 pt-3"></i>
+      <div class="progress-bar1"><div class="middle-align progress-bar__bg mr-5 pl-5"><div class="progress-bar__fg_wrapper"><div class="progress-bar__fg" style="transform: translateX(-100%);"></div></div><button aria-label="Change progress" class="middle-align progress-bar__slider" style="left: 0%;"></button></div></div>
+    </div>
+  </div>
+</footer>
 
 
 
