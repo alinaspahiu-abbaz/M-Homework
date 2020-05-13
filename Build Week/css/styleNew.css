@@ -14,6 +14,10 @@ a{
    
 }
 
+.card {
+    width: 200px !important;
+}
+
 
 
 /* Don't display Spotify NavBar on small and ekstra small device */
@@ -36,5 +40,26 @@ a{
 @media (max-width: 767px){
     .nav-2 {
         display: none;
+    }
+}
+
+@media (max-width: 575px){
+    #nav1-medium {
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    #small {
+        width:100vh;
     }
 }
