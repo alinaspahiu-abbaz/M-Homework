@@ -1,0 +1,21 @@
+body {
+    border:5px solid green;
+}
+
+a{
+    color:green;
+}
+
+/* Don't display Spotify NavBar on small and ekstra small device */
+@media(max-width: 767px){
+    .navbar {
+        max-width: 90vh;
+        margin-left:2px;
+        }
+    }
+
+@media (max-width: 575px){
+    #nav1-medium {
+        display: none;
+    }
+}
