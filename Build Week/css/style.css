@@ -54,6 +54,11 @@ ul li a{
     top:0.5;
 }
 
+.FirstAlbum{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
 .albumOverflow{
     overflow: auto;
 }
