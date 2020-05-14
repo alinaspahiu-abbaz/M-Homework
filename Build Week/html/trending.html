@@ -6,47 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/styleNew.css" />
     <link rel="stylesheet" href="../css/styleK.css" />
-
-    <title>Spotify</title>
+    <title>Hello, world!</title>
   </head>
-  <body>
 
-<div class="container-fluid">
-  <div class="row">  
-   
-    <!-- Spotify Nav Part-->
-    <div class="s col-sm-1 col-md-2 text-light nav-stacked-sm"> <!-- Spotify Nav Col -->
-         <div ><!-- nav div-->
-           <nav class="d-none d-sm-block">
-             <ul class="d-flex flex-column mx-4 mb-0 px-2">
-                 <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><a href="trending.html"><i class="fa fa-spotify"></i> Spotify</a></li>
-                 <li class="mb-3 a2"><a href="#"><i class="fa fa-home"></i> Home </a></li>
-                 <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search"></i> SearchK </a></li>
-                 <li class="a2"><a href="#"><i class="fa fa-bookmark"></i></i> LibraryE </a></li>
-                 <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
-                 <li > <a href="login.html"><button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></a></li>
-                 <div class="d-flex my-md-3 justify-content-center">Cookie | Privacy<br>
-                  Policy</div>
-             </ul>
-           </nav>
-        </div> <!-- end of nav div-->
-    </div><!--end of Spotify Nav Col-->
-    <!-- End of Spotify Nav Part-->
+<!-- The NAV in Small Devices-->
+<header id="smallHeader">
+  <!-- Small & Extra Small Devices -->
+  <div class="d-sm-block; d-md-none"><!-- extra small device-->
+    <nav class="navbar navbar-expand-mb navbar-dark text-white" style="background-color: #3fa1e713;">
+      <a class="navbar-brand" href="#">Spotify</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Trending<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#">PODCAST</a>
+          <a class="nav-item nav-link" href="#">MOODS AND GENRES</a>
+          <a class="nav-item nav-link" href="#">NEW RELEASES</a>
+          <a class="nav-item nav-link" href="#">DISCOVER</a>
+       </div>
+      </div>
+    </nav>
+  </div><!-- end of extra small device -->
+</header>
 
-    <!-- Second Column -->
+
+<!-- Spotify Nav for Madium Devices-->
+<div id="mediumHeader">
+  <!-- Medium - Large & Extra Large Devices -->
+  <div class="container-fluid">
+    <div class="row row-cols-2">
+  <!-- Spotify Nav Part-->
+    <div class="col-md-3 col-lg-3 col-xl-2"> <!-- Spotify Nav Col -->
+      <div class=" d-md-block d-sm-none" ><!-- nav div-->
+        <nav id="nav1-medium"class="">
+          <ul class="d-flex flex-column mx-4 mb-0 px-2">
+              <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><a href="trending.html"><i class="fa fa-spotify"></i> Spotify</a></li>
+              <li class="mb-3 a2"><a href="#"><i class="fa fa-home pl-3"></i> Home </a></li>
+              <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search pl-3"></i> SearchK </a></li>
+              <li class="a2"><a href="#"><i class="fa fa-bookmark pl-3"></i></i> LibraryE </a></li>
+              <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
+              <li > <a href="login.html"><button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></a></li>
+              <div class="d-flex my-md-3 justify-content-center">Cookie | Privacy<br>
+               Policy</div>
+          </ul>
+        </nav>
+     </div> <!-- end of nav div-->
+ </div><!--end of Spotify Nav Col-->
+
+ <!-- Second Column -->
     <!-- Colomn of Second Nav and 2 Rows With Albums-->
-    <div class="col-9 p-0"> <!-- Second Column-->
-      <div class=" "> <!-- Overflow-->
-
+    <div class="col-md-9 col-lg-9 col-xl-10 p-0"> <!-- Second Column-->
+  
       <div class="row">
         <nav class="nav-2"> 
-          <ul class="d-flex justify-content-center">
+          <ul class="d-flex justify-content-center p-0">
               <li class="p-3 a1"><a href="#"> Trending</a></li>
               <li class="p-3 a1"><a href="#"> PODCAST</a></li>
               <li class="p-3 a1"><a href="#"> MOODS AND GENRES </a></li>
@@ -56,43 +76,83 @@
         </nav> 
       </div><!--Row-->
     <!-- End of Second Nav Part-->
-
+    <div id="medium">
+      <!-- First Album -->
+      
+         <div class="row ml-5"> <div> <h1 style="text-align: center;"> Hello Album 1 </h1> </div> </div>
      
-    <!-- First Albums Row #ThrowBackThursday -->
-    
-      <div class="row d-flex "> <div class="col ml-5 mb-0"> <h1> #THROWBACKTHURSDAY</h1></div> </div>
-
-       <div class="row  mx-5 mb-0"  style="width: 100%;"> <!-- Albums 1 -->
-         <div class="row row-cols-1 justify-content-center row-cols-sm-2 row-cols-md-3 row-cols-lg-6 justify-content-center mr-3">
-            <div class="col mb-2"> <img class="img-fluid img-shadow" alt="tcshow-picture" src="../img/k-1.jpg"> <p class="d-flex justify-content-center">Italian Karaoke</p> </div>
-            <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/liri.png"><p class="d-flex justify-content-center">Lyricists</p>  </div>
-            <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/rotation.png"> <p class="d-flex justify-content-center">Italy's Frequent Rotation</p> </div>
-            <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/00.png"> <p class="d-flex justify-content-center">00s Italy</p> </div>
-            <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/coctail.png"> <p class="d-flex justify-content-center">Coctail Hour</p> </div>
-            <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/hip.png"> <p class="d-flex justify-content-center">I Love '90s Hip-Hop</p> </div>
+        <div class="row mx-5" ><!-- albumi pare pas reshtit #throwback-->
+         
+           <div class="row row-cols-md-3 row-cols-lg-4 row-cols-xl-6 d-flex justify-content-center"style="width: 100%;">
+             
+     
+             <div class="card"> <img src="../img/k-1.jpg" class="card-img-top" alt="...">
+               <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+             </div> <!-- end of divi Card nr.1-->
+     
+             <div class="card"> <img src="../img/liri.png" class="card-img-top" alt="...">
+               <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+             </div> <!-- end of divi Card nr.2-->
+     
+             <div class="card" > <img src="../img/liri.png" class="card-img-top" alt="...">
+               <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+             </div> <!-- end of divi Card nr.3-->
+     
+             <div class="card" > <img src="../img/liri.png" class="card-img-top" alt="...">
+               <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+             </div> <!-- end of divi Card nr.4-->
+     
+             <div class="card" > <img src="../img/liri.png" class="card-img-top" alt="...">
+               <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+             </div> <!-- end of divi Card nr.5-->
+     
+             <div class="card" > <img src="../img/liri.png" class="card-img-top" alt="...">
+               <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+             </div> <!-- end of divi Card nr.6-->
+     
+           </div> <!-- end of col-->
          </div>
-       </div> <!--Albums 1 -->
+         
+       
+     
+       <!-- SECOND ALBUM -->
+     
+       <div class="row ml-5 myScroll"> <div> <h1> Hello Album 2 </h1> </div> </div>
+     
+       <div class="row mx-5" ><!-- albumi pare pas reshtit #throwback-->
+        
+          <div class="row row-cols-md-3 row-cols-lg-4 row-cols-xl-6 d-flex justify-content-start"style="width: 100%;">
+            
+     
+            <div class="card"> <img src="../img/k-1.jpg" class="card-img-top" alt="...">
+              <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+            </div> <!-- end of divi Card nr.1-->
+     
+            <div class="card"> <img src="../img/liri.png" class="card-img-top" alt="...">
+              <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+            </div> <!-- end of divi Card nr.2-->
+     
+            <div class="card" > <img src="../img/liri.png" class="card-img-top" alt="...">
+              <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+            </div> <!-- end of divi Card nr.3-->
+     
+            <div class="card" > <img src="../img/liri.png" class="card-img-top" alt="...">
+              <div class="card-body"> <h5 class="card-title">Card title</h5> </div>
+            </div> <!-- end of divi Card nr.4-->
+     
+            
+            </div> <!-- end of divi Card nr.6-->
+     
+          </div> <!-- end of col-->
+        </div>
+        </div> <!-- end of albumi pare pas rreshtit #throwback-->
+       </div>
+      </div>
+     </div> <!-- end of albumi pare pas rreshtit #throwback-->
+     </div>
+    </div>
 
-    <!-- Second Albums Row #Classifiche -->
-       <div class="row "> <div class="col ml-5 mb-0 mt-5" style="width: 100%;"> <h1> Classifiche </h1> </div>  </div>
-
-        <div class="row d-flex flex-row  mx-5 mb-0"  style="width: 100%;"><!-- Albums 2 -->
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 justify-content-start mr-3">
-              <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/t50.png"> <p class="d-flex justify-content-center">Top 50 - Italy</p> </div>
-              <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/g50.png"> <p class="d-flex justify-content-center">Top 50- Global</p> </div>
-              <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/v-50.png"> <p class="d-flex justify-content-center">Viral 50 - Global</p> </div>
-              <div class="col mb-2"> <img class="img-fluid" alt="tcshow-picture" src="../img/i50.png"> <p class="d-flex justify-content-center">ItViral 50 - Italy</p> </div>
-          </div>
-       </div><!-- Albums 2 -->
-      </div> <!-- Div per te dy rreshtat e albumeve-->
-  
- </div> <!-- Row -->
-</div> <!-- Container -->
-
-
- 
-
-<!--footer-->
+    <!--footer-->
 <footer>
   <div class="row light-gray-bg">
     <div class="col-3 d-flex p-2 pl-2 align-center">
@@ -122,14 +182,12 @@
     </div>
   </div>
 </footer>
-    
-    <!-- Optional JavaScript -->
+
+
+<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
-
-
-  
 </html>

@@ -76,6 +76,16 @@ ul li a{
    
 }
 
+.myScroll{
+    max-height: 90vh;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+.myScroll::-webkit-scrollbar{
+    display:none!important;
+     }
+
 
 .btnBorder {
     border-radius:40px;
@@ -95,6 +105,38 @@ p {
     color:white;
     justify-self: center;
 }
+
+body 
+
+a{
+    color:green;
+}
+
+.nav-2 {
+    background-color: transparent;
+    color:white ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+   
+}
+
+#firstAlbum {
+    margin:0;
+    padding: 0;
+
+}
+
+#small {
+    width:100vh;
+
+}
+
+.col-sm-2 {
+ 
+}
+
 
 
 #sticky-footer {
@@ -126,6 +168,7 @@ p {
 
 
 
+
 .login_footer {
     
     color:grey;
@@ -134,6 +177,66 @@ p {
 
 @media(min-width:750px),(max-width:992px){
 
+
     
+}
+
+/* Don't display Spotify NavBar on small and ekstra small device */
+@media(max-width: 767px){
+    .navbar {
+        max-width: 90vh;
+        margin-left:2px;
+        }
+    }
+
+@media (max-width: 575px){
+    #nav1-medium {
+        display: none;
+    }
+    .nav-2{
+        display: none;
+    }
+    #medium {
+        display:none;
+    }
+}
+
+@media (max-width: 767px){
+    .nav-2 {
+        display: none;
+    }
+    #medium {
+        display: none;
+    }
+}
+
+@media (max-width: 575px){
+    #nav1-medium {
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+    #small {
+        width: 100%;
+    }
+}
+
+@media (min-width:576px)
+{ .col-sm-2{
+    flex: 100%;
+    max-width:100%;
+    
+}
+
 }
 
