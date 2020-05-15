@@ -126,7 +126,7 @@ img {
 
 .btnBorder {
     border-radius:40px;
-    width:100%;
+    padding-left: 10px;
 }
 
 .nav-2 ul {
@@ -143,12 +143,16 @@ p {
     justify-self: center;
 }
 
-.card{ 
+.card { 
     background-color: transparent;
     border: none;
     color: white;
     margin:2px;
-}
+    width:250px;
+    height:200px;
+    margin-bottom:80px;
+  
+    }
 
 
 body 
