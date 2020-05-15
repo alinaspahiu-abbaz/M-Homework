@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/styleK.css" />
+    
 
     <title>Spotify - Alina</title>
 
@@ -19,10 +19,11 @@
 
 
 <body>
-  <div class="container-fluid" id="smallContainer">
 
- <!-- The NAV in Small Devices-->
-<header id="smallHeader" class="fixed-top">
+<!-- SMALL DEVICES -->
+  
+<div class="container-fluid" id="smallContainer">
+  <header id="smallHeader" class="fixed-top"> <!-- The NAV in Small Devices-->
      <!-- Small & Extra Small Devices -->
      <div class="d-sm-block; d-md-none"><!-- extra small device-->
         <nav class="navbar navbar-expand-mb navbar-dark text-white" style="background-color: #3fa1e713;">
@@ -41,13 +42,12 @@
           </div>
         </nav>
   </div><!-- end of extra small device -->
-</header>
+</header> <!-- Small device Header -->
 
-
-
-   <!-- small Device Content -->
-   <div id="smallContent">
-    <div class="col-xs-12 sm-6 p-0 d-sm-block d-md-none"> 
+<!-- small Device Content -->
+   
+<div id="smallContent">
+  <div class="col-xs-12 sm-6 p-0 d-sm-block d-md-none"> 
  
      <div class="row"> <!-- H1 Row -->
        <div> 
@@ -56,7 +56,7 @@
      </div> <!-- End of H1 Row-->
           
      <div class="row mx-5 " ><!-- 4th Row - Classifiche-->
-       <div class="row row-cols-xs-1 row-cols-sm-2 d-flex justify-content-start"style="width: 100%;">
+       <div class="row row-cols-xs-1 row-cols-sm-2 d-flex justify-content-center" style="width: 100%;">
                  
              <div class="card "> <img src="../img/k-1.jpg" class="card-img-top" alt="...">
                <div class="card-body"> <h5 class="card-title">Italian Karaoke</h5> </div>
@@ -66,7 +66,7 @@
                <div class="card-body "> <h5 class="card-title">Lyricists</h5> </div>
              </div> <!-- end of divi Card nr.2-->
       
-             <div class="card " > <img src="../img/rotation.png" class="card-img-top" alt="...">
+             <div class="card ml-4" > <img src="../img/rotation.png" class="card-img-top" alt="..." style="width:193px;">
                <div class="card-body"> <h5 class="card-title">Italy's Frequent Rotation</h5> </div>
              </div> <!-- end of divi Card nr.3-->
       
@@ -78,27 +78,27 @@
                <div class="card-body"> <h5 class="card-title">Coctail Hour</h5> </div>
              </div> <!-- end of divi Card nr.3-->
       
-             <div class="card " > <img src="../img/hip.png" class="card-img-top" alt="...">
+             <div class="card ml-4" > <img src="../img/hip.png" class="card-img-top" alt="..." style="width: 195px;">
                <div class="card-body"> <h5 class="card-title"> I Love my 90s Hip-Hop</h5> </div>
              </div> <!-- end of divi Card nr.4-->
        </div> <!-- end of col-->
      </div> <!-- end of Fourth Row - Classifiche-->
      
-     </div> <!-- end of Second Column-->>
+     </div> <!-- end of Second Column-->
  
  
- <hr style="color:grey; background-color: grey;">
+ <hr style="background-color: grey; margin-bottom: 50px;">
  
-    <div class="col-sm-12 col-sm-6 "> 
+   <div class="col-sm-12 col-sm-6"> 
  
-     <div class="row ml-3 "> <!-- H1 Row -->
+     <div class="row ml-3"> <!-- H1 Row -->
        <div> 
          <h1> Classifiche </h1> 
        </div> 
      </div> <!-- End of H1 Row-->
           
      <div class="row mx-3 " ><!-- 4th Row - Classifiche-->
-       <div class="row row-cols-xs-1 row-cols-sm-2 d-flex justify-content-start"style="width: 100%;">
+       <div class="row row-cols-xs-1 row-cols-sm-2 d-flex justify-content-center"style="width: 100%;">
                  
              <div class="card"> <img src="../img/t50.png" class="card-img-top" alt="...">
                <div class="card-body"> <h5 class="card-title">Top 50 - Italy</h5> </div>
@@ -118,10 +118,40 @@
        </div> <!-- end of col-->
      </div> <!-- end of Fourth Row - Classifiche-->
      
-     </div> <!-- end of Second Column-->>
+     </div> <!-- end of Second Column-->
    </div>
   </div>
 
+  <!-- Footer for Small Devices -->
+
+ <div id="smallFooter" class="fixed-bottom bg-dark mt-2 px-3">
+  <div class="row  d-sm-block d-md-none d-flex justify-content-center "> 
+     <div id="icons" class="pt-3">
+        <button class="btn-dark"><i class="fa fa-random pr-2 pt-1"></i></button>
+        <button class="btn-dark"><i class="fa fa-step-backward pr-2 pt-1"></i></button>
+        <button class="btn-dark" id="play"><i class="fa fa-play-circle pr-2"></i></button>
+        <button class="btn-dark"><i class="fa fa-step-forward pr-2 pt-1"></i></button>
+        <button class="btn-dark"><i class="fa fa-retweet pt-1"></i></button>
+       </div>
+  </div>
+
+    <div class="row">
+      <div class="col d-flex">
+        <label style="color:white;">0:00</label>
+           <div class="progress-bar">
+             <div class="middle-align progress-bar__bg">
+               <div class="progress-bar__fg_wrapper">
+                 <div class="progress-bar__fg" style="transform: translateX(-100%);"></div>
+               </div>
+                    <button aria-label="Change progress" class="middle-align progress-bar__slider" style="left: 0%;"></button>
+             </div>
+            </div>
+        <label style="color:white;">3:21</label>
+      </div>
+    </div>
+  </div>
+
+ 
 <!---------------------------------------------------------------->
                    <!-- Large Devices -->
 <!---------------------------------------------------------------->
@@ -286,7 +316,7 @@
     </div>
   </div>
   
-</footer>
+<!-- </footer>
 <!-- Small Device Footer -->
 <footer id="smallFooter" class="fixed-bottom">
   <div class="row light-gray-bg  "> 
@@ -309,7 +339,7 @@
   
   </div>
 
-</footer>
+</footer> -->
 
 <!-- <div id="smallFooter" class="fixed-bottom">
   <div class="row light-gray-bg d-sm-block d-md-none "> 
@@ -335,6 +365,157 @@
 
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script>
+      window.onload = function(){
+                var songs = document.querySelectorAll("#songs .card>div")
+                let menu = document.querySelectorAll("#menuOl li")
+
+                for(let i=0; i<menu.length;i++){
+                  var checked = document.querySelector(".border-left")
+                  menu[i].addEventListener("click",function(){
+                    if(menu[i].classList.contains("border-left")){
+                      menu[i].style.border=`0px !important`
+                    }else{
+                      menu[i].classList.toggle("border-left")
+                    }
+                    
+                  })
+                  
+                  menu[i].addEventListener("mouseover",function(){
+                    menu[i].style.borderLeft="4px solid rgb(1, 199, 1)"
+                  })
+                  menu[i].addEventListener("mouseout",function(){
+                    menu[i].style.borderLeft=""
+                  })
+                }
+
+                for(let i=0; i<songs.length; i++){
+
+                    songs[i].addEventListener("click",function(event){
+                      let selected = document.querySelector(".selected")
+                        if(selected){
+                            selected.className = selected.className.replace(`selected`,``)
+                        }
+                        event.currentTarget.className += "selected"
+                        let songName = document.querySelector(".selected .d-flex p").innerText
+                        let length = document.querySelector(".selected .d-flex p:not(:first-child)").innerText
+
+                        let newName = document.querySelector("#songTitle").innerText = songName
+                        let newLength = document.querySelector("#songLength").innerText = length
+
+                        let audio = document.querySelector("#audio")
+                        audio["src"] = `/playList/${newName}.mp3`
+                    })
+                }
+                let myAudio = document.getElementById("audio")
+                let progress = document.querySelector(".progress-bar")
+                myAudio.addEventListener("timeupdate",function(event){
+                  progress.style.width = ((myAudio.currentTime / myAudio.duration)* 100) +"%";
+                },false)
+
+                myAudio.addEventListener("timeupdate",function(event){
+                  let currentMinutes, currentSeconds, totalMinutes, totalSeconds
+                  currentMinutes = Math.floor((myAudio.currentTime / 60))
+                  totalMinutes = Math.floor((myAudio.duration / 60))
+                  currentSeconds = Math.floor((myAudio.currentTime % 60))
+                  totalSeconds = Math.floor((audio.duration % 60))
+
+                  let currentTime = currentMinutes + ":" + currentSeconds
+                  let totalTime = totalMinutes + ":" + totalSeconds
+                  currentSongTime.innerText = currentTime
+                  songLength.innerText = totalTime
+                },false)
+
+                let seeking;
+                volume.addEventListener("mousedown",function(){
+                  myAudio.volume = volume.value / 100
+                })
+                volume.addEventListener("mousemove",function(){
+                  myAudio.volume = volume.value / 100
+                })
+
+                volumeIcon.addEventListener("click",function(){
+                  if(myAudio.muted){
+                    myAudio.muted = false
+                    document.querySelector("#volumeIcon i").classList="fa fa-volume-up ml-3 pt-3"
+                  }else{
+                    myAudio.muted = true
+                    document.querySelector("#volumeIcon i").classList="fa fa-volume-off ml-3 pt-3"
+                  }
+                },false)
+
+            }
+            var myAudio = document.getElementById("audio")
+            var isPlaying = true
+
+            function togglePlay() {
+              if (isPlaying) {
+                myAudio.pause()
+              } else {
+                myAudio.play();
+              }
+            }
+            myAudio.onplaying = function() {
+              isPlaying = true;
+              document.querySelector("#play i").classList="fa fa-pause pr-2"
+            }
+            myAudio.onpause = function() {
+              isPlaying = false;
+              document.querySelector("#play i").classList="fa fa-play-circle pr-2"
+            }
+            function playNext(){
+              let songs = document.querySelectorAll("#songs .card>div")
+              let selected = document.querySelector(".selected")
+              let nr = parseInt(document.querySelector("#songs .selected .songNr").innerText)
+                            
+              if(selected){
+                nr+= 1
+                selected.className = selected.className.replace(`selected`,``)
+                songs[nr].className +="selected"
+              }
+              let songName = document.querySelector(".selected .d-flex p").innerText
+              let newName = document.querySelector("#songTitle").innerText = songName
+              let audio = document.querySelector("#audio")
+              audio["src"] = `/playList/${newName}.mp3`
+            }
+            
+            function playBack(){
+              let songs = document.querySelectorAll("#songs .card>div")
+              let selected = document.querySelector(".selected")
+              let nr = parseInt(document.querySelector("#songs .selected .songNr").innerText)
+                            
+              if(selected){
+                if(!nr==0){
+                  nr-= 1
+                  selected.className = selected.className.replace(`selected`,``)
+                  songs[nr].className +="selected"
+
+                  let songName = document.querySelector(".selected .d-flex p").innerText
+                  let length = document.querySelector(".selected .d-flex p:not(:first-child)").innerText
+
+                  let newName = document.querySelector("#songTitle").innerText = songName
+                  let newLength = document.querySelector("#songLength").innerText = length
+
+                  let audio = document.querySelector("#audio")
+                  audio["src"] = `/playList/${newName}.mp3`
+                }
+              }
+              
+            }
+
+            function loop(){
+              if(document.getElementById("loop").classList.contains("checked")){
+                document.getElementById("loop").classList.remove("checked")
+                myAudio.loop = false
+              }else{
+                document.getElementById("loop").classList+="checked"
+                myAudio.loop = true
+              }
+              
+            }
+
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
