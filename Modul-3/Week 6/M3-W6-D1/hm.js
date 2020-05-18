@@ -43,5 +43,21 @@ let num = 105;
  num = ((num >= 40 && num <= 60) || (num >= 70 && num <= 100)) ? "Yes!" : "No!"; 
  console.log(num)
 
+ // 6. Write a JavaScript program to create a new string of specified copies (positive number) of a given string.
 
+ // 7. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
 
+  let city ='New Delhi';
+  let displayCity = (city.substring(0,3) ==='Los' || city.substring(0,3) === 'New')? city : '';
+ 
+   console.log(displayCity);
+
+// 8. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
+const computeSum = function(a, b)
+{
+  let  arr =[3, 5, 8];
+  arr = arr.reduce(a+b,0);
+  return arr;
+  
+}
+console.log(computeSum(arr));
