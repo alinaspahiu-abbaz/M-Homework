@@ -32,7 +32,7 @@
 
              <div class="row row-cols-2 mt-2">
                 <div class="col-6 flex-row justify-content-start align-items-center">
-                  <form>
+                  <form id="check">
 
                     <input type="checkbox" style="font-size:10px;" class="d-flex justify-content-start" id="rememberMe" name="rememberMe" value=""> 
                     <label for="remember_me"> Remember Me</label>
@@ -40,6 +40,15 @@
                     
                   </form>
                 </div>
+                <style>
+                  #check input[checked]{
+                    width:20px !important;
+                    height:20px !important;
+                    color:green !important;
+                    background-color: green !important;
+                    fill: teal !important;
+                  }
+                </style>
 
                 
 
