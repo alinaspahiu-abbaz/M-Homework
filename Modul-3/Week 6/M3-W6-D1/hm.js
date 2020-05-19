@@ -50,6 +50,38 @@ let num = 105;
   let city ='New Delhi';
   let displayCity = (city.substring(0,3) ==='Los' || city.substring(0,3) === 'New')? city : '';
  
-   console.log(displayCity);
+   console.log(displayCity); // mot in the way I wwanted to be.
 
 // 8. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
+
+let compute = function()
+{
+    let sum =0;
+    for (let i = arguments.length-1;  i >= 0; i--) 
+        {    sum+=arguments[i];      }
+          return sum;
+}
+ console.log(compute(3,10,20))
+
+ // 9. Write a JavaScript program to test whether an array of integers of length 2 contains 1 or a 3. 
+
+ let contains = function() {
+
+    let arr = [2, 5];
+    arr = (arr.includes(1) || arr.includes(3)) ? "It is included" : 'Nope!'; 
+ return arr;
+}
+console.log(contains());
+
+// 10. Write a JavaScript program to test whether an array of integers of length 2 does not contain 1 or a 3
+
+let DoesNotContains = function() {
+
+    let arr = [2, 3];
+    arr = (!arr.includes(1) || !arr.includes(3)) ? "It is not here" : 'There it is!'; 
+ return arr;
+}
+console.log(DoesNotContains());
+
+
+
