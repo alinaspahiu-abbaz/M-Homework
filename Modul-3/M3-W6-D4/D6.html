@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+​
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <title>My Shopping Card</title>
+    <!--
+            You are creating the "shopping cart experience" for a Online Marketplace.
+            You have the list of the available books from the current API:
+            https://striveschool.herokuapp.com/books
+            What you have to do is:
+            0) Get all the products from the API using a fetch
+            1) Display the list of items available on the page using template literals `` and .forEach
+            2) Add a "add to cart button"
+            3) When the button is pressed, change the style of the item and add it to another list
+            4) Add "skip" button next to each item
+            5) When pressed, the button should remove from the page the item not interesting from the user
+            6) Add a "search bar". When the user types more than 3 chars, you should filter the content of the page to show only the items with a matching name (hint: use .filter method)
+            7) Allow the user to delete items from the cart list
+            
+            [EXTRA]
+            8) Add a "clean cart" button, to clean the whole list.
+            9) Create a second "detail page" for the product. When the user clicks on a product name, the app should redirect him to the secondary page, passing the ASIN in query string
+            10) In page "detail" show some details of the selected product
+        -->
+</head>
+​
+<body>
+    <div class="container">
+        <button type="button" class="btn btn-dark mt-3" onclick="listOfItems()">Title List</button>
+        <button type="button" class="btn btn-dark mt-3" onclick="">Add to Cart</button>
+       
+        <div class="row" id="source">
+        
+        
+        </div>
+​
+    </div>
+    <div class="container">
+        <h4>Order List</h4>
+        <div class="row" id="destination">
+        
+        
+        </div>
+    
+    </div>
+    
+​
+<script>
+​
+    // fetch('https://striveschool.herokuapp.com/books')
+    // .then(response => response.json())
+    // .then(data => console.log(data));
+    
+   /*  window.onload = () => {
+        listOfItems()
+    } */
+    
+    function listOfItems() {
+        const url = 'https://striveschool.herokuapp.com/books?offset=0&limit=50'
+        
+        fetch(url).then(response => response.json())
+        .then(data =>{ 
+            data.forEach((currElement) => {
+                //let outerDiv = document.createElement('div')
+                let listItems = document.querySelector('.row')
+                
+                //outerDiv.className= 'col-md-4'
+                
+                listItems.innerHTML+=`
+                <div class="card card mb-4 col-md-4 mt-3" >
+                    <img src="${currElement.img}" class="card-img-top" alt="...">
+                    <div class="card-body"> 
+                        <a href="#" class="btn btn-dark skipbtn">Skip</a>
+                        <button type="button" class="btn addbtn btn-dark"> Add Cart</button>
+                    </div>
+                    </div>`
+                //listItems.appendChild(outerDiv)    
+                const hide =document.querySelectorAll(".skipbtn")
+                for (let i = 0; i < hide.length; i++) {
+                      
+                      hide[i].addEventListener("click", function(e) {
+                          e.currentTarget.parentNode.parentNode.remove();
+                      }, false);
+                  }
+                
+                let orders = document.querySelectorAll('.addbtn')
+                
+                let dest =document.querySelector("#destination")
+                source=listItems
+                for (let i = 0; i < orders.length; i++) {
+                      
+                      orders[i].addEventListener("click", function(e) {
+                        dest.innerHTML += 
+                          `<div class="col col-md-3 card mb-4 shadow-sm">
+                                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src=${e.currentTarget.parentNode.parentNode.querySelector('img').src} />
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary removeCart">
+                                            Skip
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            `
+                            const removeCart =document.querySelectorAll(".removeCart")
+                            for (let i = 0; i < removeCart.length; i++) {
+                            
+                            removeCart[i].addEventListener("click", function(e) {
+                                e.currentTarget.parentNode.parentNode.parentNode.remove();
+                            }, false);
+                    }
+                      }, false);
+                      
+                  }
+                
+            });  
+             
+                   
+                  
+             //console.log(data)
+        });
+        
+    }
+​
+</script>
+</body>
+​
+</html>
