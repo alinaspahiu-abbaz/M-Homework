@@ -75,13 +75,68 @@ console.log(contains());
 
 // 10. Write a JavaScript program to test whether an array of integers of length 2 does not contain 1 or a 3
 
-let DoesNotContains = function() {
+// let DoesNotContains = function() {
 
-    let arr = [2, 3];
-    arr = (!arr.includes(1) || !arr.includes(3)) ? "It is not here" : 'There it is!'; 
- return arr;
+//     let arr = [2, 3];
+//     arr = (!arr.includes(1) || !arr.includes(3)) ? "It is not here" : 'There it is!'; 
+//  return arr;
+// }
+// console.log(DoesNotContains());
+
+// 11. Write a JavaScript to find the longest string from a given array of strings.
+
+function longest (string) {
+    let long='';
+
+    for(let i=0; i<string.length; i++) {
+        if(string[i].length > long) {
+            long = string[i].length;
+        }
+    }
+    return long;
 }
-console.log(DoesNotContains());
+console.log(longest('Alina', 'Merd', 'Nora', 'Nafije')) //ka ni gabim
+
+// 12. Write a JavaScript program to find the types of a given angle.
+//     Types of angles:
+//     Acute angle: An angle between 0 and 90 degrees.
+//     Right angle: An 90 degree angle.
+//     Obtuse angle: An angle between 90 and 180 degrees.
+//     Straight angle: A 180 degree angle.
+
+function findAngle (){
+    let angle = 200;
+
+    if(angle<90) {
+        console.log("This is a Acute Angle!");
+    } else if(angle===90) {
+        console.log("This is a Rigth Angle!");
+    } else if(angle > 90 || angle < 180) {
+        console.log("This is a Obtuse Angle!");
+    } else {
+        console.log("This is a Straight Angle!");
+    }
+}
+findAngle()
+
+
+// 13. Write a JavaScript program to find the index of the greatest element of a given array of integers
+ 
+function greatestElement () {
+    let arr = [1, 3, 5, 9, 4, 6];
+    console.log(arr.indexOf(Math.max(...arr)));
+}
+greatestElement();
+
+
+// 14. Write a JavaScript program to get the largest even number from an array of integers.
+
+function largestEven () {
+    let arr = [1, 2, 5, 9, 4, 6];
+    
+    console.log(arr.indexOf(Math.max(...arr)));
+}
+largestEven();
 
 
 
