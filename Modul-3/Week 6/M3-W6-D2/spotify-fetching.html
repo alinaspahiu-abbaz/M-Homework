@@ -1,0 +1,120 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Start from your previous Spotify Exercise.</h1>
+​
+    <p>
+      The goal of this exercise is to fetch data from the API instead of having
+      them "wired up" in the page.
+    </p>
+​
+    <p>
+      Generate automatically 3 lists based on the "search API" response
+    </p>
+    <ul id="eminemList">
+      <li><button type="button" class="btn btn-primary" onclick="eminem()">Eminem</button></li>
+    </ul>
+      <!-- <li><button type="button" class="btn btn-primary" onclick="metal()">Metalica</button></li>
+      <li><button type="button" class="btn btn-primary" onclick="behemoth()">Behemoth</button></li>
+    </ul>
+​ -->
+    <h3>
+      Load them during page load, and create the collections based on the API
+      response.
+    </h3>
+​
+    <h4>
+      [EXTRA] Make the central part of the page scrollable both horizontally and
+      vertically
+    </h4>
+​
+    <h4>
+        [EXTRA] Add a "List albums" button. When pressed, he should create and display a list of albums on the page
+    </h4>
+​
+    <h4>
+        [EXTRA] Add a "Count Unique" button. When pressed, he should log the number of unique albums on the page
+    </h4>
+​
+    <h4>
+      [EXTRA] Add a search button to change the API query
+    </h4>
+  </body>
+  <script>
+    function eminem() {
+       fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+              "method": "GET",
+              "headers": {
+                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+                "x-rapidapi-key": "b0688e745dmsh41b788a14af44c3p1bd80cjsn95f97f3e6443"
+              }
+            })
+
+            
+           .then(response => response.json()) //.json() is a mthod here
+           .then(parsedJson => { //parsedJson is a list of users as an array
+            console.log(parsedJson)
+             const list = document.getElementById('myStuff');
+             console.log(list)
+
+             
+               parsedJson.forEach(user => { 
+                 const listElement = document.createElement('li')
+                 const textNode = document.createTextNode(data)
+                 listElement.appendChild(textNode);
+                 list.appendChild(listElement);
+
+
+
+
+               })
+             
+           })
+    }
+    //         .then(response => response.json())
+    //         .then(data => data.data)
+    //         .then(dataColected =>{
+    //           console.log(dataColected)
+    //         })
+    //         .catch(err => console.log(err))
+    //         data.forEach( data => {
+    //           const listElement = document.createElement('li');
+    //           const textNode = document.createTextNode(eminem);
+    //           listElement.appendChild(textNode);
+    //           list.appendChild(listElement);
+    //         }).catch(err => console.log(err));
+    // }
+    // function metal() {
+    //    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica", {
+    //           "method": "GET",
+    //           "headers": {
+    //             "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+    //             "x-rapidapi-key": "b0688e745dmsh41b788a14af44c3p1bd80cjsn95f97f3e6443"
+    //           }
+    //         })
+    //         .then(response => response.json()).then(
+    //         data => data.data)
+    //         .then(dataColected =>{
+    //           console.log(dataColected)
+    //         })
+    //         .catch(err => console.log(err))
+    // }
+    // function behemoth() {
+    //    fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth", {
+    //           "method": "GET",
+    //           "headers": {
+    //             "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+    //             "x-rapidapi-key": "b0688e745dmsh41b788a14af44c3p1bd80cjsn95f97f3e6443"
+    //           }
+    //         })
+    //         .then(response => response.json()).then(
+    //         data => data.data)
+    //         .then(dataColected =>{
+    //           console.log(dataColected)
+    //         })
+    //         .catch(err => console.log(err))
+    //}
+            
+  </script>
+  </script>
+</html>
