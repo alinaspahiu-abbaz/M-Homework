@@ -184,7 +184,33 @@ function clicked(){
             .then(response => response.json())
             .then(data => data.data)
             .then(dataColected =>{
-              
+              let reference = document.getElementById("fetchSearch")
+              dataColected.forEach(search =>{
+                let cardDiv = document.createElement("div")
+                cardDiv.classList="card"
+                let img = document.createElement("img")
+                img.classList="card-img-top"
+                let divCardBody = document.createElement("div")
+                divCardBody.classList="card-body d-flex justify-content-between flex-column"
+                let h6Title = document.createElement("h6")
+                h6Title.classList="card-title"
+                h6Title.innerText=search.title_short
+                let pArtist = document.createElement("p")
+                pArtist.innerText="Artist: "+search.artist.name
+                let pAlbum = document.createElement("p")
+                pAlbum.innerText="Album: "+search.album.title
+                let pDuration = document.createElement("p")
+                pDuration.innerText="Duration: "+((search.duration)/100)
+
+                img.src=search.album.cover
+                
+                divCardBody.appendChild(h6Title)
+                divCardBody.appendChild(pArtist)
+                divCardBody.appendChild(pAlbum)
+                divCardBody.appendChild(pDuration)
+                cardDiv.appendChild(img)
+                cardDiv.appendChild(divCardBody)
+                reference.appendChild(cardDiv)
               })
             })
             .catch(err => console.log(err))
