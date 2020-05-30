@@ -142,7 +142,7 @@
     <div class="ml-5"><h1>ThrowBack</h1> #ThrowBack</div>
     
 </div>
-<div class="col-10 gray-bg" style="height:560px; overflow-y: auto;">
+<div class="col-10 gray-bg" style="height:560px; width:100%; ">
     <div id="fetchSearch" class="row row-cols-6">
       
     </div>                 
@@ -183,7 +183,9 @@ function clicked(){
             })
             .then(response => response.json())
             .then(data => data.data)
+
             .then(dataColected =>{
+                
               let reference = document.getElementById("fetchSearch")
               dataColected.forEach(search =>{
                 let cardDiv = document.createElement("div")
