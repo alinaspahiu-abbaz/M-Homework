@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css" />
+    
+
+    <title>Spotify - Alina</title>
+
+</head>
+
+
+<body>
+
+<!-- SMALL DEVICES -->
+  
+<div class="container-fluid" id="smallContainer">
+  <header id="smallHeader" class="fixed-top"> <!-- The NAV in Small Devices-->
+     <!-- Small & Extra Small Devices -->
+     <div class="d-sm-block; d-md-none"><!-- extra small device-->
+        <nav class="navbar navbar-expand-mb navbar-dark text-white p-3" style="background-color: #3fa1e713;">
+                <a class="navbar-brand" href="#">Spotify</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <ul class="d-flex flex-column mx-4 mb-0 px-2">
+              <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><a href="trending.html"><i class="fa fa-spotify"></i> Spotify</a></li>
+              <li class="mb-3 a2"><a href="#"><i class="fa fa-home pl-3"></i> Home </a></li>
+              <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search pl-3"></i> Search </a></li>
+              <li class="a2"><a href="../artistPage.html"><i class="fa fa-bookmark pl-3"></i></i> Library </a></li>
+              <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
+              <li > <a href="login.html"><button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></a></li>
+              <div class="d-flex my-md-3 justify-content-center mb-5" style="margin-bottom:1000px;">Cookie | Privacy<br>
+                   Policy</div>
+              </ul>
+          </div>
+          </div>
+        </nav>
+  </div><!-- end of extra small device -->
+</header> <!-- Small device Header -->
+
+<!-- small Device Content -->
+   
+
+  <!-- Footer for Small Devices -->
+
+ <div id="smallFooter" class="fixed-bottom bg-dark mt-2 px-3">
+  <div class="d-sm-block d-flex justify-content-center "> 
+     <div id="icons" class="pt-3">
+        <button class="btn-dark" onclick="playBack()"><i class="fa fa-random pr-2 pt-1"></i></button>
+        <button class="btn-dark" onclick="togglePlay()" id="play"><i class="fa fa-step-backward pr-2 pt-1"></i></button>
+        <button class="btn-dark" id="play" onclick="playNext()"><i class="fa fa-play-circle pr-2"></i></button>
+        <button class="btn-dark" onclick="loop()" id="loop"><i class="fa fa-step-forward pr-2 pt-1"></i></button>
+        <button class="btn-dark"><i class="fa fa-retweet pt-1"></i></button>
+     </div>
+  </div>
+
+    <div class="row">
+      <div class="col d-flex">
+        <label style="color:white;">0:00</label>
+           <div class="progress-bar">
+             <div class="middle-align progress-bar__bg">
+               <div class="progress-bar__fg_wrapper">
+                 <div class="progress-bar__fg" style="transform: translateX(-100%);"></div>
+               </div>
+                    <button aria-label="Change progress" class="middle-align progress-bar__slider" style="left: 0%;"></button>
+             </div>
+            </div>
+        <label style="color:white;">3:21</label>
+      </div>
+    </div>
+  </div>
+ 
+
+ 
+<!---------------------------------------------------------------->
+                   <!-- Large Devices -->
+<!---------------------------------------------------------------->
+
+
+<!--NAV for  Medium - Large & Extra Large Devices -->
+
+<!-- Spotify Nav for Madium Devices-->
+<div >
+  <div class="container-fluid">
+    <div class="row row-cols-2">
+  <!-- Spotify Nav Part -  First Column-->
+  <div class="col-md-3 col-lg-3 col-xl-2" id="mediumHeader" > <!-- Spotify Nav Col -->
+    <div class="d-sm-none d-md-block" id="mediumSpotify"><!-- nav div-->
+      <nav   id="mediumHeader">
+        <ul class="d-flex flex-column mx-4 mb-0 px-2">
+          <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><a href="trending.html"><i class="fa fa-spotify"></i> Spotify</a></li>
+          <li class="mb-3 a2"><a href="#"><i class="fa fa-home pl-3"></i> Home </a></li>
+          <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search pl-3"></i> Search </a></li>
+
+
+          <li> <input style="width: 100px;" class="form-control mr-sm-2" id="searchInput" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="clicked()">Search</button></li>
+
+
+          <li class="a2"><a href="../artistPage.html"><i class="fa fa-bookmark pl-3"></i></i> Library </a></li>
+          <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
+          <li > <a href="login.html"><button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></a></li>
+          <div class="d-flex my-md-3 justify-content-center mb-5" style="margin-bottom:1000px;">Cookie | Privacy<br>
+               Policy</div>
+          </ul>
+      </nav>
+    </div> <!-- end of nav div-->
+ </div><!--end of Spotify Nav Col-->
+
+
+
+ <!-- Second Column -->
+
+ <!-- Colomn of Second Nav and 2 Rows With Albums-->
+ <div class="col-md-9 col-lg-9 col-xl-10 p-0"> 
+
+    <div class="row m-0"><!-- First Row (Nav)-->
+       <nav class="nav-2"> 
+          <ul class="d-flex justify-content-center p-0">
+              <li class="p-3 a1"><a href="#"> Trending</a></li>
+              <li class="p-3 a1"><a href="#"> PODCAST</a></li>
+              <li class="p-3 a1"><a href="#"> MOODS AND GENRES </a></li>
+              <li class="p-3 a1"><a href="#"> NEW RELEASES</a> </li>
+              <li class="p-3 a1"><a href="#">DISCOVER</a></li> 
+          </ul>
+        </nav> 
+    </div><!--end of First Row-->
+<!-- End of Second Nav Part-->
+
+<div class="row">
+    <div class="ml-5"><h1>ThrowBack</h1> #ThrowBack</div>
+    
+</div>
+<div class="col-10 gray-bg" style="height:560px; overflow-y: auto;">
+    <div id="fetchSearch" class="row row-cols-6">
+      
+    </div>                 
+        </div>
+
+
+
+ 
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+
+  <script>
+
+function clicked(){
+              document.getElementById("fetchSearch").innerHTML=""
+              
+          let button = document.querySelector("#searchInput").value
+
+        fetch(`https://deezerdevs-deezer.p.rapidapi.com/search?q=${button}`, {
+              "method": "GET",
+              "headers": {
+                "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+                "x-rapidapi-key": "b0688e745dmsh41b788a14af44c3p1bd80cjsn95f97f3e6443"
+              }
+            })
+            .then(response => response.json())
+            .then(data => data.data)
+            .then(dataColected =>{
+              let reference = document.getElementById("fetchSearch")
+              dataColected.forEach(search =>{
+                let cardDiv = document.createElement("div")
+                cardDiv.classList="card"
+                let img = document.createElement("img")
+                img.classList="card-img-top"
+                let divCardBody = document.createElement("div")
+                divCardBody.classList="card-body d-flex justify-content-between flex-column"
+                let h6Title = document.createElement("h6")
+                h6Title.classList="card-title"
+                h6Title.innerText=search.title_short
+                let pArtist = document.createElement("p")
+                pArtist.innerText="Artist: "+search.artist.name
+                let pAlbum = document.createElement("p")
+                pAlbum.innerText="Album: "+search.album.title
+                let pDuration = document.createElement("p")
+                pDuration.innerText="Duration: "+((search.duration)/100)
+
+                img.src=search.album.cover
+                
+                divCardBody.appendChild(h6Title)
+                divCardBody.appendChild(pArtist)
+                divCardBody.appendChild(pAlbum)
+                divCardBody.appendChild(pDuration)
+                cardDiv.appendChild(img)
+                cardDiv.appendChild(divCardBody)
+                reference.appendChild(cardDiv)
+              })
+            })
+            .catch(err => console.log(err))
+
+        }
+
+  </script>
+</html>
