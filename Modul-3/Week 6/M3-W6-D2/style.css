@@ -1,0 +1,329 @@
+body { 
+    background-color: rgba(7, 7, 65, 0.664);
+    background: linear-gradient(to right, rgb(33, 73, 126), #010b13);
+    width: 100%;
+    height: 90vh;
+   
+    }
+
+/* the dropdown nav bar for small devices */
+
+#smallContainer{
+width:100% !important;
+}
+
+#smallHeader {
+    background-color: #010b13;
+    }
+    
+#smallContent{
+
+    
+    justify-content: space-around;
+}
+h3{
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+nav {
+    background-color: black;
+    justify-content: flex-start;
+    position: relative;
+    margin-left: -10%;
+    margin-bottom:30px;
+    height:80%;
+}
+
+ul {
+    list-style-type: none;
+    height: 93vh;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+ul li a{
+    color:white;
+    
+}
+
+ ul li a:hover{
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+  }
+
+.a1:hover {
+    color: green;
+    display: inline-block;
+    position: relative;
+
+}
+img {
+    width:250px;
+    height:200px;
+}
+
+/* img:hover {
+    transform: scale(1.1, 1.1);
+    transition: .3s transform;
+} */
+
+.a1:hover::after {
+    content: '';
+    height: 4px;
+    border-radius: 30px;
+    width:30%;
+    background-color: rgb(4, 179, 4);
+    position: absolute;
+    left:calc(50% - 15%);
+    bottom:0;
+    top:0.5;
+}
+
+.FirstAlbum{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.albumOverflow{
+    overflow: auto;
+}
+
+.a2:hover {
+    font-weight: bold !important;
+    color:white;
+    text-decoration: none;
+    border-left:3px solid rgb(8, 211, 8) !important; 
+    border-bottom:none !important;
+}
+
+.nav-2 {
+    background-color: transparent;
+    color:white ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+   
+}
+
+.myScroll{
+    max-height: 85vh;
+  overflow: auto;
+  
+}
+
+#medium {
+    flex-wrap:nowrap;
+}
+
+.myScroll::-webkit-scrollbar{
+    display:none!important;
+     }
+#medium .myScroll{
+    padding-bottom:1px ;
+    
+
+}
+
+
+.btnBorder {
+    border-radius:40px;
+    padding-left: 10px;
+}
+
+.nav-2 ul {
+    height: 50px;
+    width: 700%;
+}
+h1 {
+    color:white;
+    font-size:38px;
+}
+
+p {
+    color:white;
+    justify-self: center;
+}
+
+.card { 
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin:2px;
+    width:250px;
+    height:200px;
+    margin-bottom:80px;
+  
+    }
+
+
+body 
+
+a{
+    color:green;
+}
+
+.nav-2 {
+    background-color: transparent;
+    color:white ;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+   
+}
+
+
+#firstAlbum {
+    margin:0;
+    padding: 0;
+
+}
+
+#small {
+    width:100vh;
+
+}
+
+#smallFooter {
+    width:100%
+}
+
+
+
+
+
+
+
+
+
+
+
+  .progress-bar{
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.progress-bar2{
+    width: 30%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 4px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.login_footer {
+    
+    color:grey;
+    font-size: smaller;
+}
+
+
+
+/* Don't display Spotify NavBar on small and ekstra small device */
+@media(max-width: 767px){
+    .navbar {
+        max-width: 95vh;
+        margin:auto;
+        padding: 10px;
+        }
+    }
+
+    @media (max-width: 567px){
+        #mediumHeader {
+            display: none;
+            
+        }
+    }
+
+@media (max-width: 575px){
+    #nav1-medium {
+        display: none;
+    }
+    .nav-2{
+        display: none;
+    }
+    #medium {
+        display:none;
+    }
+}
+
+@media (max-width: 767px){
+    .nav-2 {
+        display: none;
+    }
+    #medium {
+        display: none;
+    }
+}
+
+@media (min-width: 575px){
+    
+}
+
+@media (max-width: 767px){
+    #bigFooter {
+        display: none;
+    }
+}
+
+
+@media (max-width: 767px){
+    #small {
+        width: 100%;
+    }
+}
+
+@media (min-width:576px)
+{ .col-sm-2{
+    flex: 100%;
+    max-width:100%;
+    
+}
+
+}
+
+@media (min-width: 768px) {
+    #smallContent {
+        display: none;
+    }
+
+    
+}
+
+@media (min-width: 1100px) {
+    .row{
+        flex-wrap: nowrap;
+    }
+}
+
+/* footer of small and xs devices placed in center */
+@media (max-width: 768px) {
+    #icons {
+        align-items: center;
+    
+        display:flex;
+        justify-content: center !important;
+        
+       }
+}
+
+@media (min-width: 767px) {
+    #icons {
+        align-items:center;
+        display: flex;
+        justify-content: center !important;
+    }
+}
