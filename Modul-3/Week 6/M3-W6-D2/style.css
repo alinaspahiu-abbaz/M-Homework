@@ -2,7 +2,7 @@ body {
     background-color: rgba(7, 7, 65, 0.664);
     background: linear-gradient(to right, rgb(33, 73, 126), #010b13);
     width: 100%;
-    height: 90vh;
+    height: 80%;
    
     }
 
@@ -192,6 +192,7 @@ a{
 #smallFooter {
     width:100%
 }
+
 
 
 
