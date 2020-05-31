@@ -49,80 +49,7 @@
   </div><!-- end of extra small device -->
 </header> <!-- Small device Header -->
 
-<!-- small Device Content -->
-   
-
-  <!-- Footer for Small Devices -->
-
- <div id="smallFooter" class="fixed-bottom bg-dark mt-2 px-3">
-  <div class="d-sm-block d-flex justify-content-center "> 
-     <div id="icons" class="pt-3">
-        <button class="btn-dark" onclick="playBack()"><i class="fa fa-random pr-2 pt-1"></i></button>
-        <button class="btn-dark" onclick="togglePlay()" id="play"><i class="fa fa-step-backward pr-2 pt-1"></i></button>
-        <button class="btn-dark" id="play" onclick="playNext()"><i class="fa fa-play-circle pr-2"></i></button>
-        <button class="btn-dark" onclick="loop()" id="loop"><i class="fa fa-step-forward pr-2 pt-1"></i></button>
-        <button class="btn-dark"><i class="fa fa-retweet pt-1"></i></button>
-     </div>
-  </div>
-
-    <div class="row">
-      <div class="col d-flex">
-        <label style="color:white;">0:00</label>
-           <div class="progress-bar">
-             <div class="middle-align progress-bar__bg">
-               <div class="progress-bar__fg_wrapper">
-                 <div class="progress-bar__fg" style="transform: translateX(-100%);"></div>
-               </div>
-                    <button aria-label="Change progress" class="middle-align progress-bar__slider" style="left: 0%;"></button>
-             </div>
-            </div>
-        <label style="color:white;">3:21</label>
-      </div>
-    </div>
-  </div>
- 
-
- 
-<!---------------------------------------------------------------->
-                   <!-- Large Devices -->
-<!---------------------------------------------------------------->
-
-
-<!--NAV for  Medium - Large & Extra Large Devices -->
-
-<!-- Spotify Nav for Madium Devices-->
-<div >
-  <div class="container-fluid">
-    <div class="row row-cols-2">
-  <!-- Spotify Nav Part -  First Column-->
-  <div class="col-md-3 col-lg-3 col-xl-2" id="mediumHeader" > <!-- Spotify Nav Col -->
-    <div class="d-sm-none d-md-block" id="mediumSpotify"><!-- nav div-->
-      <nav   id="mediumHeader">
-        <ul class="d-flex flex-column mx-4 mb-0 px-2">
-          <li class="mb-3 " style="font-size: 30px; font-weight: bold;"><a href="trending.html"><i class="fa fa-spotify"></i> Spotify</a></li>
-          <li class="mb-3 a2"><a href="#"><i class="fa fa-home pl-3"></i> Home </a></li>
-          <li class="mb-3 a2"><a href="homePage.html"><i class="fa fa-search pl-3"></i> Search </a></li>
-
-
-          <li> <input style="width: 100px;" class="form-control mr-sm-2" id="searchInput" placeholder="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" onclick="clicked()">Search</button></li>
-
-
-          <li class="a2"><a href="../artistPage.html"><i class="fa fa-bookmark pl-3"></i></i> Library </a></li>
-          <li class="item mt-auto"><button type="button" class="btn btn-light btnBorder mb-3"><b>Sign Up</b></button></li>
-          <li > <a href="login.html"><button type="button" class="btn btn-outline-secondary btn-dark text-white btnBorder mb-3"><b>Log In</b></button></a></li>
-          <div class="d-flex my-md-3 justify-content-center mb-5" style="margin-bottom:1000px;">Cookie | Privacy<br>
-               Policy</div>
-          </ul>
-      </nav>
-    </div> <!-- end of nav div-->
- </div><!--end of Spotify Nav Col-->
-
-
-
- <!-- Second Column -->
-
- <!-- Colomn of Second Nav and 2 Rows With Albums-->
+   <!-- Colomn of Second Nav and 2 Rows With Albums-->
  <div class="col-md-9 col-lg-9 col-xl-10 p-0"> 
 
     <div class="row m-0"><!-- First Row (Nav)-->
@@ -133,13 +60,15 @@
               <li class="p-3 a1"><a href="#"> MOODS AND GENRES </a></li>
               <li class="p-3 a1"><a href="#"> NEW RELEASES</a> </li>
               <li class="p-3 a1"><a href="#">DISCOVER</a></li> 
+              <li class="p-3"> <input style="width: 100px;" class="mr-sm-2" id="searchInput" placeholder="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" onclick="clicked()">Search</button></li>
           </ul>
         </nav> 
     </div><!--end of First Row-->
 <!-- End of Second Nav Part-->
 
 <div class="row">
-    <div class="ml-5"><h1>ThrowBack</h1> #ThrowBack</div>
+    <div class="ml-5"><h1>ThrowBack</h1></div>
     
 </div>
 <div class="col-10 gray-bg" style="height:560px; width:100%; ">
@@ -185,7 +114,7 @@ function clicked(){
             .then(data => data.data)
 
             .then(dataColected =>{
-                
+               
               let reference = document.getElementById("fetchSearch")
               dataColected.forEach(search =>{
                 let cardDiv = document.createElement("div")
