@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h2>Create your first React App!</h2>
+​
+    <h4>
+      In this exercise you are gonna create, by using components, your own book store!
+    </h4>
+​
+    <ol>
+      <li>
+        Install and use the create-react-app command to create your new application
+      </li>
+
+      <li>Install and configure Boostrap / react-bootstrap in your app</li>
+
+      <li>
+        Create a MyNav component which include a boostrap navigation bar (Home, About, Browse) Note: we don't know how
+        to navigate yet, so please just put some "#" in the hrefs
+      </li>
+
+      <li>Create a MyFooter component which include a footer for the page with all the basic information like: Company logo(optional) and name, fake adress, social icons etc..</li>
+
+      <li>
+        Create a Welcome component with a Jumbotron and a tagline for your shop
+      </li>
+
+      <li>
+        Create a Latest Release component. This component should read from one of the json files and print out the
+        book covers and titles.
+      </li>
+
+      <li>
+        Publish everything on GitHub
+      </li>
+    </ol>
+  </body>
+</html>
