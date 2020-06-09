@@ -8,6 +8,8 @@ import LatestRelease from './components/LatestRelease'
 import {Container, Row, Col} from "react-bootstrap";
 
 
+
+
 function App()
  {
    return (
@@ -15,11 +17,9 @@ function App()
            <div className="App">
               <NavBar title="MyBookStore" />
               <JumboTron/>
-              <Row className='row-cols-3'>
-                <Col className='col-xs-3'>
+              
               <LatestRelease />
-              </Col>
-              </Row>
+              
               <Footer />
            </div>
            </>
