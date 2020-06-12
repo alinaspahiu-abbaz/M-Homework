@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Circular";
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.woff")
+      format("woff"),
+    url("https://www.bu.edu/cdn/fonts/Circular/Circular-Bold.ttf")
+      format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+body{
+  background-color: rgb(25, 219, 219);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position:center;
+  color: whitesmoke;}
+body {
+  font-family: "Circular";
+  color: whitesmoke;
+  
+}
+#Navbar{
+  background-color: black;
+}
+
+
+.sidebar {
+    background-color: black;
+  }
+  .sidebar .img-thumbnail {
+    background-color: black;
+    
+  }
+  .sidebar .nav-item a {
+    color: #93A0B0;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+  .sidebar .nav-item i {
+    font-size: 1.3rem;
+  }
+  .sidebar .nav-item.active a, 
+  .sidebar .nav-item a:hover {
+    color: whitesmoke;
+    font-weight: bold !important;
+color: white;
+text-decoration: none;
+border-left: 2px solid rgb(8, 211, 8) !important;
+border-bottom: none !important;
+    
+
+  }
+  .sidebar-sticky ul:last-of-type li:first-of-type button:hover {
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid white;
+
+  }
+  .sidebar-sticky ul:last-of-type  .btn-secondary:hover {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+
+  }
+  .sidebar-sticky ul:last-of-type li:last-of-type  {
+    color: #93A0B0;
+    
+
+  }
+  .navbar-toggler{
+      color: white !important;
+      background-color: rgba(0, 81, 255, 0.164) !important;
+  }
+
+  
+     
+    .bolder {
+        font-weight: bold;
+    }
+    .home-content  .container h3 {
+        text-transform: uppercase;
+    }
+    .home-content .container span {
+        font-size: 0.8rem;
+    }
+    .home-content .navbar:not(.fixed-bottom) a{
+      text-transform: uppercase;
+    }
+    .home-content .navbar:not(.fixed-bottom)  .nav-item.active .nav-link,  
+    .home-content .navbar:not(.fixed-bottom)  .nav-item .nav-link:hover  {
+        border-bottom: 2px solid rgba(56, 177, 94, 0.877);
+        color: whitesmoke;
+    }
+    .home-content .nav-item .nav-link,
+    .nav-bottom a  {
+       
+        color: #93A0B0;
+    }
+    .fixed-bottom {
+      background-color: #2C2C2C;
+    }
+    .fixed-bottom .col i {
+      font-size: 1.1rem;
+      color: #B3B3B2;
+    }
+    .fixed-bottom .col i:nth-child(3) {
+      font-size: 3rem !important;
+      color: #B3B3B2;
+    
+    }
+    .col > a > div {
+      position: relative;
+    }
+    .col > a > div:hover:after {
+      
+      position:absolute;
+      left:0; top:0;
+      width:100%; height:100%;
+      display:inline-block;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      content: '';
+      z-index: 10;
+
+    }
+    
+    #container {
+      position: relative;
+      height: 100% !important;
+      width: 100% !important;
+  
+    }
+    #container div.row {
+      height: 100% !important;
+    }
+
+  
+ 
+
+  
+    @media screen and (max-width: 768px ) {
+        .sidebar-sticky .col:last-of-type {
+        padding-bottom: 4rem;
+      }
+     
+      .fixed-bottom .row .col:last-of-type {
+        display: none !important;
+      }
+ 
+     
+
+     
+      /* .sidebar-sticky .col:last-of-type ul li:last-of-type   {
+       display: block;
+      } */
+      }
+      @media screen and (max-width:320px) {
+        .home-content h3
+       {
+          font-size: 1rem !important;
+          margin-left: 35px !important;
+        }
+        /* .home-content .row {
+          padding-bottom: 7rem !important;
+        } */
+       
+        .home-content .container >h3 +.row, .albums-search {
+         margin-bottom: 15rem !important;
+         }
+         /* .sidebar-sticky .col:last-of-type
+         {
+           padding-bottom: 7rem ;
+         } */
+         .fixed-bottom .row .col:last-of-type {
+           display: none !important;
+         }
+         
+         .container h2 {
+           margin-left: 20px;
+         }
+         
+       
+      
+     }
