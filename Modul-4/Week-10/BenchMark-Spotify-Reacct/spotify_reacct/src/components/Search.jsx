@@ -24,7 +24,7 @@ export default class search extends Component {
            },
 
            }
-           axios(get).then(data => this.setState({data: data.data.data}))
+           axios(get).then(data => this.setState({data: data.data.data.slice(0,12)}))
            
            
        
