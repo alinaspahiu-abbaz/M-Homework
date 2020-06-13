@@ -1,18 +1,35 @@
+body{
+    background-color: rgba(7, 7, 65, 0.664);
+    background: linear-gradient(to right, rgb(33, 73, 126), #010b13);
+}
 .theFooter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height:5em;
-}
-
-.btnStyle{
-  border:none;
-  padding: 10px;
-  font-size: 20px;
-  margin-bottom:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:5em;
+  }
   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+  .btnStyle{
+    border:none;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom:0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  
+  .nav-1{
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    list-style: none;
+    margin-left:-30px;
+    height:91.4vh;
+  }
+  
+  
+  
