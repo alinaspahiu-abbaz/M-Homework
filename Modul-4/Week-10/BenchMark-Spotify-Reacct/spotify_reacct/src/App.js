@@ -1,13 +1,20 @@
 import React from 'react';
-import './App.css';
-import MediaPlayer from './components/MediaPlayer'
+
+import MyFooter from './components/MyFooter'
 import Search from './components/Search';
+import SpotifyNavBar from './components/SpotifyNavBar'
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <MediaPlayer />
-     <Search />
+      <Search />
+      <SpotifyNavBar />
+      
+       <MyFooter />
+
+      
+     
     </div>
   );
 }
