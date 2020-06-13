@@ -1,4 +1,18 @@
-.MediaPlayer {
-  background-color: black;
-  height:3em;
+.theFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:5em;
 }
+
+.btnStyle{
+  border:none;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom:0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
