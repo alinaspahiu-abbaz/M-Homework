@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h2>Improve your Bookstore!</h2>
+​
+    <h4>
+      In this exercise you are gonna update your own book store!
+    </h4>
+​
+    <pre>
+      <code>
+        API INFO:
+​
+        You have a CRUD endpoint for comments on:
+​
+        https://striveschool.herokuapp.com/api/comments/
+​
+        This means you can GET, DELETE, POST, PUT data from there.
+​
+        The Comment structure is this:
+​
+        {
+          "comment": "A good book but definitely I don't like many parts of the plot",
+          "rate": 3,
+          "elementId": "0316438960"
+        }
+​
+        Where:
+        - comment is the comment inserted by the user
+        - rate is a value between 1 and 5
+        - elementId is the ASIN of the book
+        - use usual Authentication
+​
+        !IMPORTANT!
+        Yuo can't get ALL the comments. You have to specify the ElementID / ASIN in the query:
+​
+        https://striveschool.herokuapp.com/api/comments/{ASIN}
+​
+        Doing so, you'll get all the comments for a specific book
+​
+      </code>
+    </pre>
+​
+    <ol>
+      <li>
+        Create a new "Comment" component to display a single Comment object
+      </li>
+      <li>
+        Create a "CommentList" component that displays all the comments passed as prop
+      </li>
+      <li>
+        Add a "AddComment" component to the "CommentList" component. This component should allow the user to POST a new
+        Comment on the selected Book
+      </li>
+      <li>
+        Add, to each "Comment", a button to DELETE it
+      </li>
+      <li>
+        Add to "CommentList" component the capability to filter comments using a text box. The Filter will display only
+        comments that contains as comment or as author the specified string
+      </li>
+      <li>
+        Create a Loading component. This loading component should appear on the page when an ajax request is ongoing
+      </li>
+      <li>
+        Create an error handler for the requests. If something goes wrong, an error message should appear!
+      </li>
+      <li>
+        Publish everything on GitHub
+      </li>
+    </ol>
+  </body>
+</html>
