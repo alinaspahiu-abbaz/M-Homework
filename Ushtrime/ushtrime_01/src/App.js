@@ -1,13 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Home from './Home'
+import Home from './components/Home'
+import NavBar from './components/NavBar'
+
 
 
 function App() {
+  
   return (
     <div className="App">
-      <Home />
+      <NavBar />
+      {/* //<Home /> */}
+      
     </div>
   );
 }
