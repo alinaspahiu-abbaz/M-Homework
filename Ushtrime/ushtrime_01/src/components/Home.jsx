@@ -35,16 +35,16 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
     render() {
         return (
             <div>
-                 <Row>
+                 <Row className='mt-5 justify-content-center'>
                     {this.state.songs &&
-                    this.state.songs.map(song => <SingleSong props={song} key={song.id} />)}
+                    this.state.songs.slice(10,11).map(song => <SingleSong props={song} key={song.id} />)}
                 </Row>
                 <h1>Fetch</h1>
-                <Row >
-                <Col md={4}>
+                <Row className='justify-content-center'>
+                
                 {/* //{console.log(this.state.songs)} */}
                 { this.state.songs && 
-                    this.state.songs.map( song => 
+                    this.state.songs.slice(0,4).map( song => 
                     <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={song.album.cover_medium}/>
                   <Card.Body>
@@ -60,7 +60,7 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
                  
                 
                 }
-                </Col>
+              
                 </Row>
                
             </div>
