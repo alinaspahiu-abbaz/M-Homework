@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import {Form, FormControl, Button, Row, Col, Container} from 'react-bootstrap'
+import {FormControl, Button, Row, Col, Container, Card} from 'react-bootstrap'
 
 export default class NewSearch extends Component {
 
     state ={
         songs: [],
-        search: ''
+        search: '',
+        favoriteSongs:[]
     }
 
     fetchData = async () => {
@@ -19,16 +20,26 @@ export default class NewSearch extends Component {
         if (resp.ok) {
             const data = await resp.json()
             this.setState({
-                songs: data.data
+                songs: data.data.filter(song => song.album.title="Kalbimin Sultanı")
+                
             });
         }
     }
 
-  updateState = (event) => {
-      this.setState({
-          search: event.currentTarget.value
-      })
-  }
+    
+    updateState = (event) => {
+        this.setState({
+            search: event.currentTarget.value
+        });}
+
+    kengaPreferuar = (kenga) => {
+        this.setState({
+            songs: this.state.songs.filter(song => song.id !== kenga.id),
+            favoriteSongs:[...this.state.favoriteSongs, kenga]// this.state.favoriteSongs.concat(kenga)
+        })
+    }
+
+
 
     render() {
         return (
@@ -37,14 +48,43 @@ export default class NewSearch extends Component {
             <div> 
                 <Container>
                 <Row className='justify-content-center mt-3'>
-               
+                  
                  <FormControl 
                  onChange={this.updateState}
                  type="text" 
                  placeholder="Search" 
                  className="mr-sm-2" />
-                <Button variant="outline-success">Search</Button>
+                <Button 
+                onClick={() => this.fetchData()}
+                variant="outline-success">Search</Button>
                
+                </Row>
+                <Row>
+                    <h1> Songs </h1>
+                    <Col>
+                    {this.state.songs.map(song =>
+                    <Card onClick={()=>this.kengaPreferuar(song)} style={{width: '18rem'}}>
+                      <Card.Img variant='top' src={song.album.cover_xl} />
+                        <Card.Body>
+                            <Card.Title>{song.title}</Card.Title>
+                        </Card.Body>
+                    </Card>
+                    )}
+                    </Col>
+                    <h1>Best Songs</h1>
+                    <Col>
+                    
+
+                    {this.state.favoriteSongs.map(song =>
+                    <Card style={{width: '18rem'}}>
+                      <Card.Img variant='top' src={song.album.cover_xl} />
+                        <Card.Body>
+                            <Card.Title>{song.title}</Card.Title>
+                        </Card.Body>
+                    </Card>
+                    )}
+                    
+                    </Col>
                 </Row>
                 </Container>
             </div>
