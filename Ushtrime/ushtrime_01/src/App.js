@@ -4,6 +4,7 @@ import { Container, ListGroup, Dropdown } from 'react-bootstrap'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 import NewSearch from './components/NewSearch'
+import SearchLinkedInProfile from './components/SearchLinkedInProfile';
 
 
 
@@ -52,7 +53,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <NavBar search={this.searchedField} status={this.state.status} users={this.state.data && this.state.search &&
+        {/* <NavBar 
+        search={this.searchedField} 
+        status={this.state.status} 
+        users={this.state.data && this.state.search &&
           this.state.data.filter(user => user.name.toLowerCase().startsWith(this.state.search.toLowerCase())).length > 0 ?
           this.state.data
             .filter(user => user.name.toLowerCase().startsWith(this.state.search.toLowerCase()))
@@ -64,7 +68,7 @@ class App extends Component {
         } /> */}
         <NewSearch />
         {/* <Home /> */}
-       
+       {/* <SearchLinkedInProfile /> */}
       </div>
 
     );
