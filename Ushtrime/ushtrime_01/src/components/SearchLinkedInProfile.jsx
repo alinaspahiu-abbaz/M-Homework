@@ -36,7 +36,7 @@ export default class SearchLinkedInProfile extends Component {
 
                 <Button
                 onClick={this.fetchData} 
-                variant="outline-success">Search</Button>
+                variant="success">Search</Button>
                 
             </div>
         )

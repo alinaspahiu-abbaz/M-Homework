@@ -50,8 +50,7 @@ fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
                   <Card.Body>
                   <Card.Title>{song.title}</Card.Title>
                   <Card.Text>
-                     Some quick example text to build on the card title and make up the bulk of
-                     the card's content.
+                    This is the description part, also!
                    </Card.Text>
                      <Button variant="primary">Go somewhere</Button>
                    </Card.Body>
