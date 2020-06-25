@@ -3,6 +3,7 @@ const usersRoutes = require("./services/users")
 
 const server = express()
 
+server.use(express.json())
 server.use('/users', usersRoutes)
 
 //const port = process.env.PORT || 3333
