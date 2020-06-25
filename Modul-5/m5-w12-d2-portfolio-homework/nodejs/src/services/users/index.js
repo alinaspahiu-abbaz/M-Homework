@@ -34,7 +34,11 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
     const usersDB = readFile("users.json")
-    const newUser = req.body
+    const newUser = {...req.body}
+
+    usersDB.push(newUser)
+    fs.writeFileSync(path.join(__dirname, 'users.json'), usersDB)
+    res.status(201).send(newUser)
 })
 
 
