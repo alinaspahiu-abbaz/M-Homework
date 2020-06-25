@@ -2,7 +2,7 @@
     {
         "name": "Alina",
         "surname": "Spahiu",
-        "id": "001",
+        "id": 1,
         "email": "alina.s.abbaz@gmail.com",
         "dateOfBirth":"13.07.1993"
     },
@@ -10,7 +10,7 @@
     {
         "name": "Merdije",
         "surname": "Hameli",
-        "id": "002",
+        "id": 2,
         "email": "merdije.hameli@gmail.com",
         "dateOfBirth":"10.09.1993"
     },
@@ -18,7 +18,7 @@
     {
         "name": "Leonora",
         "surname": "Kryeziu",
-        "id": "003",
+        "id": 3,
         "email": "nora.k@gmail.com",
         "dateOfBirth":"09.08.1993"
     }
