@@ -8,38 +8,64 @@ const router = express.Router()
 //making a function
 const readFile = (fileName) => {
     const buffer = fs.readFileSync(path.join(__dirname, fileName))
-    return JSON.parse(buffer.toString())
-
+    const bufferToString = buffer.toString()
+    return JSON.parse(bufferToString)
 }
 
+const usersDB = readFile("users.json")
+const pathJoin = path.join(__dirname, "users.json")
+
+// GET all:
+
 router.get("/", (req, res) => {
-    const usersDB = readFile('users.json')
-   
-    if(req.query && req.query.name) {
-        const filteredUsers = usersDB.filter((user) => user.hasOwnProperty('name') && user.name === req.query.name)
-
-        res.send(filteredUsers)
-    } else {    res.send(usersDB)   }
-
-router.get("/:id", (req, res) => {
-    req.params.id = readFile('users.json')
-    const retrivedUser = usersDB.filter(user =>user.id === req.params.id)
-    res.send(retrivedUser)
-
+    res.status(200).send(usersDB)
+    console.log("OK")
 })
 
+
+//GET only one:
+router.get("/:uid", (req, res) => {
+   const user = usersDB.find(user=>user.id===req.params.uid)
+
+   res.status(200).send(user)
+   console.log(user)
+})
+
+//POST:
+router.post("/",(req, res) => {
+    const newUser = {...req.body, id: uniqid()}
+    usersDB.push(newUser)
+
+    fs.writeFileSync(pathJoin, JSON.stringify(usersDB))
+    res.status(201).send(newUser)
+    console.log(newUser)
+})
+
+//PUT:
+router.put("/:uid",(req, res) =>{
+    const newDB = usersDB.filter(user=>user.id !== req.params.uid)
+    const modified = {...req.body, id: req.params.uid}
+    newDB.push(modified)
+
+    fs.writeFileSync(pathJoin, JSON.stringify(newDB))
+    res.send(modified)
+    console.log(modified)
+})
+
+
+//DELETE:
+router.delete("/:uid",(req, res) =>{
+    const filteredUsersArray = usersDB.filter(user=>user.id !== req.params.uid)
+    fs.writeFileSync(pathJoin, JSON.stringify(filteredUsersArray))
+
+    res.status(202).send(filteredUsersArray)
+    console.log(filteredUsersArray)
+})
+    
+   
     
 
-})
 
-router.post("/", (req, res) => {
-    const usersDB = readFile("users.json")
-    const newUser = {...req.body}
-
-    usersDB.push(newUser)
-    fs.writeFileSync(path.join(__dirname, 'users.json'), usersDB)
-    res.status(201).send(newUser)
-})
 
 
 module.exports = router
