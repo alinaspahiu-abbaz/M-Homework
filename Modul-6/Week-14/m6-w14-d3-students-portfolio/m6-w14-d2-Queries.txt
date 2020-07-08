@@ -1,0 +1,20 @@
+1. Find all records with isActive equals to true:
+--> {isActive: true} // RetrivedRecords: 51.
+
+2. Find all records with age greater than 26:
+--> {"age" :{$gt:26}} // RetrivedRecords: 54.
+
+3. Find all records with age greater than 26 and lower or equal than 30:
+--> {"age" :{$gt:26, $lt:30}} // RetrivedRecords: 14
+
+4. Find all records with brown or blue eyes:
+--> {$or: [{eyeColor:"brown"}, {eyeColor: "blue"}]} // RetrivedRecords: 66
+
+5. Find all records with no green eyes:
+--> {eyeColor : {$not: /green/}} // RetrivedRecords: 66:
+
+6. Find all records with no green eyes nor blue:
+--> {$nor:[{eyeColor:"green"}, {eyeColor:"blue"}]} // RetrivedRecords: 35
+
+7. Find all records with company==="FITCORE" and return email onlyFilter:
+-->
