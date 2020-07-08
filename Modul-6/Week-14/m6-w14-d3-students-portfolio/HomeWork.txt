@@ -1,0 +1,14 @@
+/* 
+    Upgrade Students Portfolio Project
+    //BACKEND
+    - Add validation with Validator package --> https://www.npmjs.com/package/validator:
+    explore the documentation and try to experiment as many validation methods as possible on all students'fields
+    - Add error handlers        
+    - Upgrade GET /students route by returning students + totalStudents, number of all the students in the collection (I mean ALL)
+    - Add Sort, Skip, Limit and queries to route GET /students/:
+    Client should have the possibility to call the route and set query parameters to sort, skip and limit records to implement server side pagination
+    //FRONTEND
+    In past homework you focused on backend stuff leaving out frontend. Today go and complete previous homework's features.
+    [EXTRA] Add pagination to students list --> add page numbers buttons to the list and do a little math. How many pages do you need to display 10 students
+    per page? How could I use skip and limit from the backend to correctly use serverside pagination?
+*/
