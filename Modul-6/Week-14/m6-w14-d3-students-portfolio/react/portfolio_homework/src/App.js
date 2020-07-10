@@ -1,34 +1,32 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import './App.css';
-import {Container, Row, Col} from "react-bootstrap"
+import './index.css'
+import {Container, Row, Col,Pagination} from "react-bootstrap"
 import HomePage from "./components/HomePage"
-import {Router, Switch, Route} from "react-router"
+import MyNavbar from "./components/MyNavbar"
+import {BrowserRouter as Router, Link, Switch, Route} from "react-router-dom"
+
 import BackOffice from './components/BackOffice';
 
 class App extends React.Component {
+ 
   render() {
     
   return (
-    // <Router>
-    
-    //     <Switch>
-    //       <Route path="/details/:_id">
-    //         <div> Details for a single Student</div>
-    //       </Route>
-
-    //       <Route path="/backoffice">
-    //         <BackOffice />
-    //       </Route>
-
-    //       <Route path="/" exact>
-    //         <HomePage />
-    //       </Route>
-    //     </Switch>
+    <>
+   
+    <MyNavbar  />
+   
      
-    // </Router>
-    <HomePage />
+      <Container >
+    
+      <HomePage/>
+    
+      </Container>
+   </>
   );
 }
+
 }
 
 export default App;
