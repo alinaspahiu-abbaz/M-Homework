@@ -16,7 +16,7 @@ export default class Students extends Component {
      
             <div>
             { this.state.students.map(student =>
-                <Row className="mb-3">
+                <Row className="">
                  
                  <Col sm={2}>{student.name}</Col> 
                  <Col sm={2}>{student.surname}</Col>
