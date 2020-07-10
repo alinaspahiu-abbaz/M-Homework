@@ -24,7 +24,7 @@ mongoose.connect("mongodb://localhost:27017/m6-w14-d2-hm-student-portofolio",{
 })
 .then (
 
-server.listen(3033, ()=>{
-    console.log("Find me on port 3033!")
+server.listen(3035, ()=>{
+    console.log("Find me on port 3035!")
 })
 ).catch((err) => console.log(err))
