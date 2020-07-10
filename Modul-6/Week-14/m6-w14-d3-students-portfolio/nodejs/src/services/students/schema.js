@@ -33,7 +33,7 @@ const studentSchema = new Schema({
         type: Number,
         required: true,
         min: 1970,
-        max: 2020
+        max: 2005
     },
     
     country:String,
