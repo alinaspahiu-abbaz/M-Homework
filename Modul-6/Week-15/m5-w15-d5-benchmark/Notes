@@ -1,0 +1,14 @@
+Shopping CART:
+
+INSERT INTO public."Users"(
+	 user_id, name, surname, email)
+	VALUES ( 1,'Alina', 'Spahiu', 'alina@gmail.com');
+	
+	select * from "Users"
+	
+	select p_id from "Products" Limit 1
+	
+	-- Inserting ne shopping kart nje uer dhe nje produkct
+	INSERT INTO "Shoppingcart" (p_id, user_id) VALUES (6, 1)
+	
+	select * from "Shoppingcart"
