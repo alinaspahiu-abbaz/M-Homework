@@ -34,7 +34,7 @@ export default class HomePage extends Component {
         const studentsResp = await fetch("http://localhost:3032/students")
         const students = await studentsResp.json()
         this.setState({
-            students: students,
+            students: students
        
          
         })
