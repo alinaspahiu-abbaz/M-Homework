@@ -1,0 +1,31 @@
+/*
+    Students Portfolio Repo
+    You should have already had created a Student Portfolio Repo for both Frontend and Backend.
+    Your app will be improved by connecting it to a local MongoDB storage and enabling creation, read, update and deleting in a real database.
+    //BACKEND
+    Your previously developed backend should have the following routes included:
+    GET /students => returns the list of students
+    GET /students/:id => returns a single student
+    POST /students => create a new student
+    PUT /students/:id => edit the student with the given id
+    DELETE /students/:id => delete the student with the given id
+    [EXTRA] POST /checkEmail => check if another student has the same email. The parameter should be passed in the body
+    It should not be possible to add a new student if another has the same email.
+    GET /projects => returns the list of projects
+    GET /projects/:id => returns a single project
+    POST /projects => create a new project
+    PUT /projects/:id => edit the project with the given id
+    DELETE /projects/:id => delete the project with the given id
+    [EXTRA] GET /students/:studentID/projects/ => get all the project for a student with a given studentID
+    [EXTRA] GET /projects?name=searchQuery => filter the projects and extracts the only that match the condition (es.: Name contains searchQuery)
+    We need to add MongoDB to the whole project. Mongo's data design can follow different approaches and therefore your API could look different. 
+    We could have different alternatives to design our data, like embed projects into users or create two separates collections.
+    You have to refactor previous APIs, in order to match your design choice
+    //FRONTEND
+    You should have the following features in your frontend:
+    - Add a new Student ([EXTRA]use CheckEmail before sending the post to the backend)
+    - Show Students on a list, with query by Country
+    - Every Student could be edited or deleted
+    - New Project creation / deletion / update / list
+    - Show projects in students detail using the /students/:id API
+*/
