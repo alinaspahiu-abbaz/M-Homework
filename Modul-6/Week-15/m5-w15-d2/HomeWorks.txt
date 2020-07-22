@@ -1,0 +1,38 @@
+ /*
+    
+    Students Portfolio Repo
+​
+    You are creating a Postgres structure (Tables) to save the informations about Students and Projects.
+​
+    The student Table should have the current information
+​
+    - _id --> you should define it as identity in the newly created table
+    - name 
+    - surname
+    - email
+    - dateOfBirth 
+​
+    While the project Table should have the current information
+​
+    - _id --> you should define it as identity in the newly created table
+    - Name
+    - Description
+    - Creation Date
+    - RepoURL -> Code Repo URL (es.: GitHub / BitBucket project URL)
+    - LiveURL -> URL of the "live" project
+    - StudentID --> [EXTRA] This should be a Foreign Key to Students table
+​
+    Complete the following exercise:
+​
+    EX1) Create a query for creating the table Students as specified before
+    EX2) Use the tool you prefer to connect to the DB and create the table Project
+    EX3) Write a query to insert a new Student (Your name, your email, your surname, your date of birth)
+    EX4) Write a query to insert a new Project (one of the previously created project, insert your student ID as studentid)
+    EX5) Write another query to insert a second project
+    EX6) Write a query to update the second project you entered, changing name and LiveURL
+    EX7) Write a query to select all the projects, specifying the student email too
+    EX8) Write a query to delete one of the two projects
+    EX9) Write a query to insert a second students
+    EX10) Write a query to delete the second student
+​
+*/
