@@ -1,0 +1,40 @@
+/*
+    
+    Students Portfolio Repo
+​
+    You should have already had created a Student Portfolio Repo for both Frontend and Backend. - YES
+​
+   Your app will be improved by connecting it to Azure and enabling creation, read, update and deleting in a real database. - YES
+​
+    Student should have this information:
+    - _id --> you should define it as identity in the newly created table
+    - name 
+    - surname
+    - email
+    - dateOfBirth  - YES
+​
+    //BACKEND
+​
+    Your previously developed backend should have the following routes included, if not, develop them:
+​
+    GET /students => returns the list of students - YES
+    GET /students/:id => returns a single student - YES
+    POST /students => create a new student - YES
+    PUT /students/:id => edit the student with the given id - YES
+    DELETE /students/:id => delete the student with the given id - YES
+​
+    The persistence must be granted via Postgres
+​
+    [EXTRA] POST /checkEmail => check if another student has the same email. The parameter should be passed in the body 
+    It should not be possible to add a new student if another has the same email. 
+    This route should contact students' table querying them by email, if length of resulting array is > 0 then check should fail. - NO
+​
+    //FRONTEND
+​
+    You should have the following features in your frontend:
+​
+    - Add a new Student ([EXTRA]use CheckEmail before sending the post to the backend) - NO
+    - Show Students on a list - YES
+    - Every Student could be edit or deleted - NO
+​
+*/
