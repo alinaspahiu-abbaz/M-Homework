@@ -6,17 +6,18 @@ import {Container, Row, Col, Card, Button} from "react-bootstrap";
 let books = {  horror: require("../jsons/horror.json")  };
 
 class LatestRelease extends Component {
+
   state = {   books: books.horror.slice(0,6)   }
 
 render() {
   return (
      <Container>
-       <Row className='justify-content-center'>
+       <Row className='justify-content-center mb-5'>
          {
           this.state.books.map((book) => 
            { 
              return (
-              <Col xs={12} md={4}>
+              <Col className="justify-content-center mb-4" xs={12} md={4}>
                  <Card  style={{ width: '18rem' }}>
                    <Card.Img variant="top" src={book.img}/>
                    <Card.Body>
@@ -25,7 +26,7 @@ render() {
                        Some quick example text to build on the card title and make up the bulk of
                        the card's content.
                      </Card.Text>
-                       <Button variant="primary">Go somewhere</Button>
+                   <Button variant="outline-info">Buy {book.price} $</Button>
                    </Card.Body>
                  </Card>
               </Col>
