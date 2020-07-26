@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Row, Col } from 'react-bootstrap';
 import logo from "../image/logoF.png";
+import {GrInstagram, GrFacebook, GrTwitter} from "react-icons/gr"
 
 
 
@@ -11,9 +12,9 @@ const Footer = () => {
 return (
   <div className="d-flex flex-column sticky-bottom" >
     <footer id="foo" className="footer bg-dark text-light foo">
-      <Row>
+      <Row className="justify-content-center">
         <Col>
-          <img src={logo} />
+          <img className="logo"src={logo} />
         </Col>
        
         <Col>
@@ -23,9 +24,9 @@ return (
         </Col>
 
         <Col>
-           <p className='mb-0 mt-3'>Facebook</p>
-           <p className='m-0'>Instagram</p>
-           <p className='m-0'> Twitter</p>
+           <Row  className='justify-content-left pt-2'> <p className= "my-1"> <GrFacebook />   Facebook  </p> </Row>
+           <Row  className='justify-content-left'> <p className= "my-1"> <GrInstagram />  Instagram </p> </Row>
+           <Row  className='justify-content-left'> <p className= "my-0"> <GrTwitter />    Twitter   </p> </Row>
         </Col>
       </Row>
     </footer>
