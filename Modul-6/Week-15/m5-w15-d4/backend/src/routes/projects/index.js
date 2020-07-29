@@ -8,21 +8,21 @@ router.get("/", async(req, res) => {
   try{
       const limit = req.query.limit || 10
       const offset = req.query.offset || 0
-      const order = req.query.order || "asc"
+     // const order = req.query.order || "asc"
 
       delete req.query.limit
       delete req.query.offset
-      delete req.query.order
+    //  delete req.query.order
 
 
 
        const projects = await Project.findAll({
          where: { ... req.query },
          offset: offset,
-         limit: limit,
-         order: [
-          ["name", order]
-         ]
+         limit: limit
+        //  order: [
+        //   ["name", order]
+        //  ]
         
        })
 
