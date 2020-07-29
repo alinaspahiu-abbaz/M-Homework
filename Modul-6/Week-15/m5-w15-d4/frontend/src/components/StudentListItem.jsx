@@ -4,29 +4,29 @@ import { Col, Image,Row, Button, Card } from "react-bootstrap"
 class StudentListItem extends Component {
 
     componentDidMount = async ()=>{
-        const res = await fetch("http://localhost:3029/projects")
+        const res = await fetch("http://localhost:4000/students")
         //http://localhost:3032/students
         //http:&//localhost:5432/students
         const students = await res.json()
         this.setState({
-          students: students.rows
+          students: students
         })
       }
 
-    deleteStudent = async(_id) => {
-        const res = await fetch("http://localhost:3029/projects/" + _id, {
+    deleteStudent = async(studentId) => {
+        const res = await fetch("http://localhost:4000/students/" + studentId, {
             method:"DELETE"
         })
         if(res.ok){
             // here we contact with parent to delete this is(book). The parent is on the BackOffice Component
-            //this.props.onDelete(_id)
+            //this.props.onDelete(studentId)
             alert("Deleted!")
         window.location.reload()      }
 
     }
   
     render() {
-        const { _id, name, surname, birthday, email, img } = this.props.item
+        const { studentId, name, surname, birthday, email, img } = this.props.item
         return (
             <Col md={4}>
                 <Card style={{ width: '18rem' }}>
@@ -55,7 +55,7 @@ class StudentListItem extends Component {
                         <Button className="mr-2" variant="outline-success">Projects</Button>
                         <Button className="mr-2" variant="outline-info">Edit</Button>
                         <Button 
-                       onClick= {() => this.deleteStudent(_id) }
+                       onClick= {() => this.deleteStudent(studentId) }
                         variant="outline-danger">Delete</Button>
                     </Row> 
                         
