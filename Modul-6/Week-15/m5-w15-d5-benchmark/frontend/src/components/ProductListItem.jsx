@@ -40,7 +40,7 @@ class ProductListItem extends Component {
 
                         <Row className="justify-content-center">
                             <Card.Text>
-                            <Row> {category}</Row>
+                            <Row> {category} - {price} $</Row>
                                <Row> {description}</Row>
                             </Card.Text>
                         </Row>
