@@ -7,7 +7,7 @@ class StudentList extends Component {
         return(
             <Container className="my-5">
                 <Row>
-                    {this.props.students.map(x => <StudentListItem key={x._id} item={x} />)}
+                    {this.props.students.map(x => <StudentListItem key={x.studentId} item={x} />)}
                 </Row>
             </Container>
         )
