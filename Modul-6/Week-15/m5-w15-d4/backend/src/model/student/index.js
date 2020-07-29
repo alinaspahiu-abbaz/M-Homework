@@ -1,37 +1,35 @@
-const orm = require("../../db");
-const Sequelize = require("sequelize");
+const orm = require("../../db")
+const sequelize = require("sequelize")
+const { Sequelize } = require("sequelize")
 
-const Project = orm.define(
-  "projects",
-  {
-    projectid: {
-      type: Sequelize.STRING,
-      primaryKey: true,
-    },
-    name: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    repourl: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    liveurl: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
-    studentid: {
-      type: Sequelize.STRING,
-      allowNull: false,
-    },
+// .define is the command to create the new schema
+const Student = orm.define("Students",{
+  studentId: {
+    type: Sequelize.NUMBER,
+    primaryKey: true
   },
-  {
-    timestamps: false,
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false 
+  },
+  surname: {
+    type: Sequelize.STRING,
+    allowNull: false 
+  },
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  birthday: {
+    type: Sequelize.STRING,
+    allowNull: false 
+  },
+  img: {
+    type: Sequelize.STRING,
+    allowNull: false 
   }
-);
+ },{
+    timestamps: false  
+  })
 
-module.exports = Project;
+module.exports = Student
