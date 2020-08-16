@@ -3,11 +3,6 @@ import { Row, Col } from 'react-bootstrap';
 import logo from "../image/logoF.png";
 import {GrInstagram, GrFacebook, GrTwitter} from "react-icons/gr"
 
-
-
-
-
-
 const Footer = () => {
 return (
   <div className="d-flex flex-column sticky-bottom" >
@@ -19,8 +14,7 @@ return (
        
         <Col>
           <p className='mt-3'>  Tirane, Albania</p>
-           <span>&copy; BookStore 2020</span>
-           
+           <span>&copy; BookStore 2020</span>           
         </Col>
 
         <Col>
