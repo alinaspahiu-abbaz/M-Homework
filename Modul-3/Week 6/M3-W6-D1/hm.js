@@ -8,7 +8,6 @@ const sum = function(a, b)
 }
 console.log("Sum: ", sum(3,5));
 
-
 // 2. Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.
 
 const checkNum = function(a, b) {
