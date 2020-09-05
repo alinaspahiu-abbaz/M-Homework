@@ -36,7 +36,7 @@ export default class Students extends Component {
     }
     componentDidMount = async () => {
 
-        const studentsResp = await fetch("http://localhost:3032/students")
+        const studentsResp = await fetch("http://localhost:3035/students")
         const students = await studentsResp.json()
         this.setState({
             students: students
