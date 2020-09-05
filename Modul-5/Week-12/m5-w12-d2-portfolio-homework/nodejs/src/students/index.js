@@ -3,7 +3,6 @@ const fs = require("fs-extra")
 const path = require ("path")
 const uniqid = require("uniqid")
 
-
 const studentsRouter = express.Router()
 
 
@@ -16,13 +15,13 @@ const readFile = (fileName) => {
 const studentsDB = readFile("students.json")
 const pathJoin = path.join(__dirname, "students.json")
 
-//1. GET
+//1. GET all students
 studentsRouter.get("/", (req, res) => {
     res.status(200).send(studentsDB)
     console.log(studentsDB)
 })
 
-// 2. GET
+// 2. GET only one student
 studentsRouter.get("/:sid", (req, res) => {
     const requiredStudent = studentsDB.filter(s => s.id === req.params.sid)
 
