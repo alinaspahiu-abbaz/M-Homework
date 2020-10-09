@@ -125,7 +125,6 @@ function greatestElement () {
 }
 greatestElement();
 
-
 // 14. Write a JavaScript program to get the largest even number from an array of integers.
 
 function largestEven () {
