@@ -25,8 +25,6 @@ submitProduct=async ()=>{
         brand:document.querySelector('#brand').value,
         imageUrl:document.querySelector('#imageUrl').value,
         price:document.querySelector('#price').value
-
-
     }
     console.log('myprod',myProduct)
     let response=await saveProduct(myProduct)
