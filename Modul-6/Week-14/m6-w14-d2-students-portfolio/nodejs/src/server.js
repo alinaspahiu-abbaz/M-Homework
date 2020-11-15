@@ -11,8 +11,6 @@ server.use(express.json())
 
 server.use(cors())
 
-
-
 server.use("/students", studentsRouter)
 
 mongoose.connect("mongodb://localhost:27017/m6-w14-d2-hm-student-portofolio",{
