@@ -25,7 +25,7 @@
     You should have the following features in your frontend:
     - Add a new Student ([EXTRA]use CheckEmail before sending the post to the backend)
     - Show Students on a list, with query by Country
-    - Every Student could be edited or deleted
-    - New Project creation / deletion / update / list
+    - Every Student could be edited or deleted,
+    - New Project creation / deletion / update / list,
     - Show projects in students detail using the /students/:id API
 */
