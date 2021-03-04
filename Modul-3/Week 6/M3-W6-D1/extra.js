@@ -8,6 +8,7 @@ commonly used in the string.
     maxChar("apple 1231111") === "1"
     */
 
+
 function maxhChar(str, letter) {
     let letter_Count = 0;
     for (let position = 0; position <str.length; position++)
