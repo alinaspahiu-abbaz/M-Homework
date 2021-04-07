@@ -35,8 +35,7 @@ submitProduct=async ()=>{
          }
          else{
              alert('Error')
-         }
-   
+         }  
 }
 
 const saveProduct= async (productObj)=>{
